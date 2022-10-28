@@ -16,6 +16,6 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v2
         with:
-          repository: ${{ secrets.REPO_NAME_DOCS }}
+          repository: ${{ secrets.REPO_NAME_SYNC_DOCS_WORKFLOW }}
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           event-type: sync-docs-page-event
