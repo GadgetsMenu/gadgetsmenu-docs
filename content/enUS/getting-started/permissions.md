@@ -1,6 +1,6 @@
 # GadgetsMenu Permissions
 <p>Here you can find all permissions of GadgetsMenu.</p>
-You can also check permission in-game by using command /gmenu permissions <cosmetic|commands>
+You can also check permission in-game by using command /gmenu permissions &lt;cosmetic|commands&gt;
 <p> </p>
 
 - [GadgetsMenu](#gadgetsmenu-gadgetsmenu)
@@ -51,7 +51,7 @@ A player might need these permissions to use GadgetsMenu smoothly.
 [(Back to Top)](#gadgetsmenu-permissions)
 
 ### Cosmetics (gadgetsmenu.cosmetics.*)
-```
+```json
  gadgetsmenu.hats.*
  gadgetsmenu.animatedhats.*
  gadgetsmenu.particles.*
