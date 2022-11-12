@@ -1,19 +1,11 @@
-# GadgetsMenu Wiki
-Welcome to the GadgetsMenu Wiki. You can find all information about the plugin here.
-
-***
-<p> </p>
-
-- [Features](#features)
-- [Download](#download)
-- [Suggestions](#suggestions)
-- [Reporting Bugs](#reporting-bugs)
-- [Dependencies](#dependencies)
-- [Donate](#donate)
-- [Screenshots](#screenshots)
-----
-
-<p> </p>
+---
+title: Welcome
+description: Welcome to the GadgetsMenu Wiki. You can find all information about the plugin here.
+group: none
+keywords: GadgetsMenu Wiki,Welcome
+topics:
+ - Welcome
+---
 
 ## Features
 - Contains lots of cosmetics such as **Hats**, **Animated Hats**, **Particles**, **Suits**, **Gadgets**, **Pets**, **Miniatures [PREMIUM]**, **Morphs**, **Banners**, **Emotes** & **Cloaks**.
