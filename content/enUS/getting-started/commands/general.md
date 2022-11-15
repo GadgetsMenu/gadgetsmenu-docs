@@ -1,6 +1,6 @@
 ---
 title: General Commands
-description: In this page, you can find out the general commands available in GadgetsMenu plugin and explain their usage in detail with examples.
+description: In this page, you will find out the General commands available in the plugin.
 group: commands
 keywords: Commands,General,gmenu
 topics:
@@ -9,7 +9,7 @@ topics:
  - gmenu
 ---
 
-Simply type `/gmenu help` command in-game or in console will print out a list of general commands.
+Simply type **`/gmenu help`** command in-game or in the console will print out a list of general commands.
 
 The argument syntax to be used in the command:
 - **`<required>`** - indicates the argument is required to fill in.
@@ -116,6 +116,14 @@ The argument syntax to be used in the command:
 **Example:**
 - `/gmenu menuitem Notch`
 
+## `/gmenu migrate <confirm>`
+
+**Description:** Migrate SQLite data to the current connected MySQL database.
+
+**Permission:** `gadgetsmenu.commands.migrate`
+
+**Usable in Console:** Yes
+
 ## `/gmenu namepet <name>`
 
 **Description:** Name your current summoned pet.
@@ -178,7 +186,7 @@ The argument syntax to be used in the command:
 
 **Usable in Console:** Yes
 
->[Warning] **Note:** Use this command in your own risk! It might cause bugs and memory leaks.
+>[Warning] {{title: Warning}} Use this command in your own risk! It might cause bugs and memory leaks.
 
 ## `/gmenu removeperm <cosmetic> <type> <player>`
 
