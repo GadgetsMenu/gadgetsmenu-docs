@@ -1,26 +1,37 @@
 ---
 title: Permissions
-description: Here you can find all permissions of GadgetsMenu.
+description: You can find all GadgetsMenu related permissions here and initial permission setup for beginners.
 group: getting-started
 keywords: Permissions
 topics:
  - Permissions
 ---
 
-You can also check permission in-game by using command `/gmenu permissions <cosmetic|commands>`
+All permissions are listed below.
 
-## Permissions for Beginners
-If you do not know how to setup permission for a "default" rank player, here's an example.
+To quickly get to know GadgetsMenu's permissions in your minecraft server, you may execute this command in-game to preview the available permissions.
+- `/gmenu permissions <cosmetic|commands>` - [Click here for more info](wiki/getting-started/commands/general#gmenu-permission-cosmetic-commands-page)
+
+## Permission for Beginners
+If you do not know how to setup permissions for "default" rank player to use GadgetsMenu, a sample setup is provided below.
+
 A player might need these permissions to use GadgetsMenu smoothly.
- - `gadgetsmenu.menuselector`
- - `gadgetsmenu.mysteryboxes.open.*`
- - `gadgetsmenu.animations.normal`
- - `gadgetsmenu.summonpet` (Optional) - for premium version only
- - `gadgetsmenu.discount.default` (Optional) 
+ - `gadgetsmenu.menuselector` - To get the menu item on join.
+ - `gadgetsmenu.mysteryboxes.open.*` - Allows the player to open all types of Mystery Box.
+ - `gadgetsmenu.animations.normal` - Allows the player to access the Mystery Vault animation "normal" to open the Mystery Box.
 
-</p>
+**Optional:**
+ - `gadgetsmenu.summonpet` - Allows the player summon pet **[Note: for premium version only]**
+ - `gadgetsmenu.discount.default` - Assign players to "default" discount group where purchase cosmetic items or craft Mystery Box could get a special discount rate based on settings.
 
-## GadgetsMenu (gadgetsmenu.*)
+
+>**Note:** Granting access to a parent permission will have all access to its child permissions.
+
+## GadgetsMenu
+
+**Parent Permission:** `gadgetsmenu.*`
+
+**Child Permissions:**
 * `gadgetsmenu.cosmetics.*` - Granted permission to access to all cosmetics items.
 * `gadgetsmenu.commands.*` - Granted permission to access to all commands.
 * `gadgetsmenu.menuselector` - Give player a menu selector when they join/respawn/switching world.
@@ -30,7 +41,11 @@ A player might need these permissions to use GadgetsMenu smoothly.
 * `gadgetsmenu.summonpet` - Allows the player to summon pet. (Premium Only)
 * `gadgetsmenu.discount.*` - Granted player to have the highest discount rate.
 
-## Cosmetics (gadgetsmenu.cosmetics.*)
+## Cosmetics
+
+**Parent Permission:** `gadgetsmenu.cosmetics.*`
+
+**Child Permissions:**
 ```json
  gadgetsmenu.hats.*
  gadgetsmenu.animatedhats.*
@@ -45,8 +60,12 @@ A player might need these permissions to use GadgetsMenu smoothly.
  gadgetsmenu.cloaks.*
 ```
 
-## Commands (gadgetsmenu.commands.*)
-```
+## Commands
+
+**Parent Permission:** `gadgetsmenu.commands.*`
+
+**Child Permissions:**
+```json
  gadgetsmenu.commands.about
  gadgetsmenu.commands.addpermission
  gadgetsmenu.commands.admin
@@ -74,18 +93,28 @@ A player might need these permissions to use GadgetsMenu smoothly.
  gadgetsmenu.mysteryboxes.mode
 ```
 
-## Auto Equip Cosmetic (gadgetsmenu.autoequip.*)
+## Auto Equip Cosmetic
+
+**Parent Permission:** `gadgetsmenu.autoequip.*`
+
+**Child Permissions:**
 * `gadgetsmenu.autoequip.purchase` - Equip purchased cosmetic item automatically.
 * `gadgetsmenu.autoequip.foundloot` - Equip cosmetic item found from mystery boxes.
 
-## Bypass Duration (gadgetsmenu.bypassduration.*)
+## Bypass Duration
+
+**Parent Permission:** `gadgetsmenu.bypassduration.*`
+
+**Child Permissions:**
 The bypass the default song duration of the specific gadget. Having this permission will play the song until it ends.
 * `gadgetsmenu.bypassduration.discoball` - Bypass the duration of Disco Ball Gadget.
 * `gadgetsmenu.bypassduration.djbooth` - Bypass the duration of DJBooth Gadget.
 
-[(Back to Top)](#gadgetsmenu-permissions)
+## Mystery Boxes
 
-## Mystery Boxes (gadgetsmenu.mysteryboxes.open.*)
+**Parent Permission:** `gadgetsmenu.mysteryboxes.open.*`
+
+**Child Permissions:**
 Allows a player to open specified quality of Mystery Boxes. (1-5) is the quality of the Mystery Box.
 Crafted Mystery Box will not be affected by these permissions.
 ```
@@ -96,7 +125,11 @@ Crafted Mystery Box will not be affected by these permissions.
  gadgetsmenu.mysteryboxes.open.5
 ```
 
-## Mystery Vault Animations (gadgetsmenu.animations.*)
+## Mystery Vault Animations
+
+**Parent Permission:** `gadgetsmenu.animations.*`
+
+**Child Permissions:**
 The permission to set the Mystery Vault animations when open Mystery Box.
 ```
  gadgetsmenu.animations.random
@@ -110,7 +143,11 @@ The permission to set the Mystery Vault animations when open Mystery Box.
  gadgetsmenu.animations.holiday
 ```
 
-## Open Multiple Mystery Boxes (gadgetsmenu.multipleboxes.*)
+## Open Multiple Mystery Boxes
+
+**Parent Permission:** `gadgetsmenu.multipleboxes.*`
+
+**Child Permissions:**
 The permission to access Open Multiple Mystery Boxes option.
 ```
  gadgetsmenu.multipleboxes.20
@@ -118,7 +155,11 @@ The permission to access Open Multiple Mystery Boxes option.
  gadgetsmenu.multipleboxes.250
 ```
 
-## Hats (gadgetsmenu.hats.*)
+## Hats
+
+**Parent Permission:** `gadgetsmenu.hats.*`
+
+**Child Permissions:**
 ```
  gadgetsmenu.hats.hamburger
  gadgetsmenu.hats.chocolatedonut
@@ -318,9 +359,11 @@ The permission to access Open Multiple Mystery Boxes option.
  gadgetsmenu.hats.pacman
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
+## Animated Hats
 
-### Animated Hats (gadgetsmenu.animatedhats.*)
+**Parent Permission:** `gadgetsmenu.animatedhats.*`
+
+**Child Permissions:**
 ```
  gadgetsmenu.animatedhats.siren
  gadgetsmenu.animatedhats.trafficlight
@@ -332,9 +375,7 @@ The permission to access Open Multiple Mystery Boxes option.
  gadgetsmenu.animatedhats.brokentv
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Particles (gadgetsmenu.particles.*)
+## Particles (gadgetsmenu.particles.*)
 ```
  gadgetsmenu.particles.watersplash
  gadgetsmenu.particles.dripwater
@@ -358,9 +399,7 @@ The permission to access Open Multiple Mystery Boxes option.
  gadgetsmenu.particles.smoke
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Suits (gadgetsmenu.suits.*)
+## Suits (gadgetsmenu.suits.*)
 ```
  gadgetsmenu.suits.frog.*
    gadgetsmenu.suits.frog.helmet
@@ -459,9 +498,7 @@ The permission to access Open Multiple Mystery Boxes option.
    gadgetsmenu.suits.vampire.boots
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Gadgets (gadgetsmenu.gadgets.*)
+## Gadgets (gadgetsmenu.gadgets.*)
 ```
 Fun and Games
  gadgetsmenu.gadgets.magic9ball
@@ -523,9 +560,7 @@ Visual
  gadgetsmenu.gadgets.dracula
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Pets (gadgetsmenu.pets.*)
+## Pets (gadgetsmenu.pets.*)
 ```
  gadgetsmenu.pets.silverfish.*
    gadgetsmenu.pets.silverfish
@@ -772,9 +807,7 @@ Visual
    gadgetsmenu.pets.warden
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Miniatures (gadgetsmenu.miniatures.*)
+## Miniatures (gadgetsmenu.miniatures.*)
 ```
  gadgetsmenu.miniatures.doge
  gadgetsmenu.miniatures.mrsmiley
@@ -800,9 +833,7 @@ Visual
  gadgetsmenu.miniatures.snowglobe
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Morphs (gadgetsmenu.morphs.*)
+## Morphs (gadgetsmenu.morphs.*)
 ```
  gadgetsmenu.morphs.pig
  gadgetsmenu.morphs.cow
@@ -820,9 +851,7 @@ Visual
  gadgetsmenu.morphs.guardian
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Banners (gadgetsmenu.banners.*)
+## Banners (gadgetsmenu.banners.*)
 ```
  gadgetsmenu.banners.snowbunny
  gadgetsmenu.banners.reindeer
@@ -845,9 +874,7 @@ Visual
  gadgetsmenu.banners.devourer
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Emotes (gadgetsmenu.emotes.*)
+## Emotes (gadgetsmenu.emotes.*)
 ```
  gadgetsmenu.emotes.smile
  gadgetsmenu.emotes.cool
@@ -868,9 +895,7 @@ Visual
  gadgetsmenu.emotes.dealwithit
 ```
 
-[(Back to Top)](#gadgetsmenu-permissions)
-
-### Cloaks (gadgetsmenu.cloaks.*)
+## Cloaks (gadgetsmenu.cloaks.*)
 ```
  gadgetsmenu.cloaks.superhero
  gadgetsmenu.cloaks.mystical
@@ -885,5 +910,3 @@ Visual
  gadgetsmenu.cloaks.yinandyang
  gadgetsmenu.cloaks.flameofthetitans
 ```
-
-[(Back to Top)](#gadgetsmenu-permissions)
