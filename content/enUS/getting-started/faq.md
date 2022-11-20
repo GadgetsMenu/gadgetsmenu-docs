@@ -72,9 +72,7 @@ Player-Data:
 
 Once done, restart your server and you should be able see the below message stating that GadgetsMenu has succesfully connected to MySQL database.
 
-<p>
-<img class="d-block m-auto" src="/assets/gadgetsmenu-docs/images/getting-started/faq-mysql-connect-success.PNG" alt="MySQL Success Message" title="MySQL Success Message">
-</p>
+![MySQL Success Message](/assets/gadgetsmenu-docs/images/getting-started/faq-mysql-connect-success.PNG "[Wrapper] MySQL Success Message")
 
 >**Note:** Make sure your proxy server and minecraft server is setup correctly. Especially in `spigot.yml` file, `bungeecord` setting is set to true. Otherwise, GadgetsMenu will not be able to sync data properly.
 
@@ -88,16 +86,17 @@ To use [GadgetsMenu placeholders](wiki/setup/placeholders), you're not required 
 
 ## I have purchased a cosmetic item via Mystery Dust or found a cosmetic item from opening Mystery Box, but they still can’t access that cosmetic item?
 
-**Free version**
+#### Free version
 
 GadgetsMenu Free version does not save unlocked cosmetic items in it’s database. When player purchase a cosmetic item or found a cosmetic item from opening Mystery Box, GadgetsMenu executes a command to grant the player a permission to access the cosmetic item.
 
 Therefore, you need to have a permissions plugin to handle player's permissions. Depending on the permission plugin you use, you need to set the command so that GadgetsMenu plugin will execute the correct command for granting the permissions.
 
-There are two files allocated in `/plugins/GadgetsMenu` folder you need to make changes.
-- `config.yml`
-- `mystery boxes/mystery boxes.yml`
+There are two files allocated in `/plugins/GadgetsMenu` folder you need to make changes. You need to replace the following section to the respective command based on which permissions plugin you use.
 
+You can refer to the table below to find the commands for the permission plugin you are using.
+
+- `config.yml`
 ```yaml
 Cosmetic-Item-Purchase:
   # This is the command when player purchase cosmetic items.
@@ -105,6 +104,7 @@ Cosmetic-Item-Purchase:
   Execute-Command: pex user {PLAYER} add {PERMISSION}
 ```
 
+- `mystery boxes/mystery boxes.yml`
 ```yaml
 Mystery-Boxes:
   Execute-Command: pex user {PLAYER} add {PERMISSION}
@@ -119,6 +119,16 @@ Mystery-Boxes:
 | PermissionsEx     | `pex user {PLAYER} add {PERMISSION}`               |
 | GroupManager      | `manuaddp {PLAYER} {PERMISSION}`                   |
 
-**Premium version**
+#### Premium version
 
 If you’re using premium version, you may not face the above issue. However, if you found out that your problem has the similar scenario, do reach to our [Discord](https://discord.gadgetsmenu.net/) support staff for assistance.
+
+## How can I change Mystery Dust storage to other economy storage?
+
+```yaml
+Cosmetic-Item-Purchase:
+  # Set the storage where do you want to save mystery dust.
+  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault'.
+  # 'default' represent follow player data storage.
+  Mystery-Dust-Storage: default
+```
