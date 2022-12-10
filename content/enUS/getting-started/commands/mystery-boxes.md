@@ -184,6 +184,11 @@ The argument syntax to be used in the command:
 
 **Usable in Console:** No
 
+**Examples:**
+- `/gmysteryboxes mode remove-vault` - Remove Mystery Vault by looking at the Mystery Vault.
+- `/gmysteryboxes mode remove-vault vault_1` - Remove specific Mystery Vault by name.
+- `/gmysteryboxes mode remove-vault r:3` - Remove nearby Mystery Vault by radius.
+
 ## `/gmysteryboxes mode teleport <vaultName>`
 
 **Description:** Teleport player to the given mystery vault.

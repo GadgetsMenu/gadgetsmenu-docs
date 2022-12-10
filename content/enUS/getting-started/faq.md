@@ -125,6 +125,8 @@ If you’re using premium version, you may not face the above issue. However, if
 
 ## How can I change Mystery Dust storage to other economy storage?
 
+GadgetsMenu supports several economy plugin for Mystery Dust replacement. Simply change the value of `Mystery-Dust-Storage` which can be found in `config.yml` file to any available storages mentioned in the list.
+
 ```yaml
 Cosmetic-Item-Purchase:
   # Set the storage where do you want to save mystery dust.
@@ -132,3 +134,47 @@ Cosmetic-Item-Purchase:
   # 'default' represent follow player data storage.
   Mystery-Dust-Storage: default
 ```
+
+Apart from that, GadgetsMenu also provides an API to implement your custom economy storage for Mystery Dust. If your server is using self-made economic system, you can hook GadgetsMenu Mystery Dust with your custom economy storage. Click the link for more information about [GadgetsMenu Custom Economy Storage](wiki/developers/custom-economy-storage).
+
+## How to create a Mystery Vault that used to open Mystery Boxes?
+
+Mystery Boxes can only be opened through Mystery Vault. Therefore, create Mystery Vault is a must if you want to use Mystery Box feature.
+
+You can create Mystery Vault through the following steps:
+1. Place a block (e.g. Ender Chest) at the location where you want to create Mystery Vault.
+2. Orient your user view to the newly added block.
+3. Execute the command `/gmysteryboxes mode add-vault <vaultName>` by replacing `<vaultName>` with a unique name that represents your Mystery Vault.
+4. You should be able to see holograms shown on top of your Mystery Vault like the image below, if your steps were correct.
+5. You're done! Now you may try to open Mystery Box via the newly created Mystery Vault.
+
+![Mystery Vault](/assets/gadgetsmenu-docs/images/getting-started/faq-create-mystery-vault.jpg "[Wrapper] Mystery Vault")
+
+Click on the [link](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-add-vault-vaultname) to see more details about the command.
+
+## How can I change the orientation of Mystery Vault's animation?
+
+![Mystery Vault's animation orientation](/assets/gadgetsmenu-docs/images/getting-started/faq-change-mystery-vault-orientation.jpg "[Wrapper] Mystery Vault's animation orientation")
+Your Mystery Vault's animation is facing the wrong way similar to the above image? No worries, you can redefine the Mystery Vault location and its facing direction via a command `/gmysteryboxes mode redefine <vaultName>`. (Click [here](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-redefine-vaultname) for more info)
+
+Stand in front of the Mystery Vault, navigate your user view to the opposite direction and execute the above command.
+
+> **Tips:**
+> - If you don't remember the name of your Mystery Vault, execute this command `/gmysteryboxes mode near <radius>` to get the info of nearby Mystery Vaults.
+> - For more information, please click this [link](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-near-radius).
+
+## How can I remove a Mystery Vault?
+
+You can remove Mystery Vault by looking at the Mystery Vault block and execute the following command.
+- `/gmysteryboxes mode remove-vault`
+
+If you wish to remove a Mystery Vault by its name or your nearby Mystery Vault by radius. Simply add this parameter at the end of the command `[vaultName|r:{radius}]`.
+
+**Examples:**
+- `/gmysteryboxes mode remove-vault vault_1` - Remove specific Mystery Vault by name.
+- `/gmysteryboxes mode remove-vault r:3` - Remove nearby Mystery Vault by radius.
+
+## How to give the player the Mystery Box?
+
+
+## How to give the player a random quality Mystery Box?
