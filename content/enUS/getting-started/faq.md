@@ -155,13 +155,13 @@ Click on the [link](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mo
 ## How can I change the orientation of Mystery Vault's animation?
 
 ![Mystery Vault's animation orientation](/assets/gadgetsmenu-docs/images/getting-started/faq-change-mystery-vault-orientation.jpg "[Wrapper] Mystery Vault's animation orientation")
-Your Mystery Vault's animation is facing the wrong way similar to the above image? No worries, you can redefine the Mystery Vault location and its facing direction via a command `/gmysteryboxes mode redefine <vaultName>`. (Click [here](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-redefine-vaultname) for more info)
+Your Mystery Vault's animation is facing the wrong way similar to the above image? No worries, you can redefine the Mystery Vault location and its facing direction via a command `/gmysteryboxes mode redefine <vaultName>`. ([Click here for more info](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-redefine-vaultname))
 
 Stand in front of the Mystery Vault, navigate your user view to the opposite direction and execute the above command.
 
 > **Tips:**
 > - If you don't remember the name of your Mystery Vault, execute this command `/gmysteryboxes mode near <radius>` to get the info of nearby Mystery Vaults.
-> - For more information, please click this [link](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-near-radius).
+> - [Click here for more info](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-mode-near-radius)
 
 ## How can I remove a Mystery Vault?
 
@@ -170,11 +170,143 @@ You can remove Mystery Vault by looking at the Mystery Vault block and execute t
 
 If you wish to remove a Mystery Vault by its name or your nearby Mystery Vault by radius. Simply add this parameter at the end of the command `[vaultName|r:{radius}]`.
 
-**Examples:**
+**Example:**
 - `/gmysteryboxes mode remove-vault vault_1` - Remove specific Mystery Vault by name.
 - `/gmysteryboxes mode remove-vault r:3` - Remove nearby Mystery Vault by radius.
 
 ## How to give the player the Mystery Box?
 
+You can give player Mystery Box via the below command:
+```
+/gmysteryboxes give <player> <amount> [quality] [ex=7h/7d/7m/false] [reqperm=false] c:(<quality>:<chances>)
+```
+
+You can view the full usage and description of this command by clicking [this link](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-give-player-amount-quality-ex-7h-7d-7m-false-reqperm-false-c-quality-chances).
 
 ## How to give the player a random quality Mystery Box?
+
+You can give player random quality Mystery Box via the below command:
+```
+/gmysteryboxes give <player> <amount> c:(<quality>:<chances>)
+```
+
+With this command, you don't need to specify the quality of the Mystery Box in the command param. Instead, you specify the chances of each Mystery Box quality with the following syntax.
+
+**Syntax:**
+ - `c:(<quality>:<chances>)` - Custom chances quality of mystery boxes when the quality argument is not specified.
+
+**Description:**
+ - The quality of the Mystery Box followed by the chances to get it.
+ - Please note that you must fill in all available qualities (1 - 5). Missing one will throw an error.
+ - The total chances among all qualities can be greater than 100 or less than 100.
+
+**Example:**
+ - `/gmysteryboxes give <player> <amount> c:(1:40,2:30,3:25,4:15,5:10)` - 40% chance to get 1-star Mystery Box, 30% chance to get 2-star Mystery Box...and so on.
+ - `/gmysteryboxes give <player> <amount> c:(1:80,2:70,3:65,4:5,5:3)` - 80% chance to get 1-star Mystery Box, 70% chance to get 2-star Mystery Box...and so on.
+
+ [Click here for more info about the command](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-give-player-amount-quality-ex-7h-7d-7m-false-reqperm-false-c-quality-chances)
+
+## How to give player Mystery Gifts?
+
+You can give player Mystery Gifts via this command:
+ - `/gmysteryboxes gift <player> <pack>`
+
+ [Click here for more info about the command](wiki/getting-started/commands/mystery-boxes#gmysteryboxes-gift-player-pack)
+
+> **Note:** Please noted that each Mystery Gift contains 5 Mystery Boxes. Currently the amount of the Mystery Boxes can’t be changed.
+
+## Why some players cannot open the Mystery Vault?
+
+If you create a Mystery Vault nearby the spawn point, you may not be able to open the Mystery Vault menu by right-clicking on the Mystery Vault.
+
+What you need to do is set the value of `Spawn-Protection` property to `0` in your server `server.properties` file.
+
+## Why  players can't open the Mystery Boxes?
+
+Mystery Box requires permission to be opened. Also, Mystery Box opening animation requires another permission.
+
+Click on the link below for a list of permissions required to open Mystery Box:
+- [Mystery Boxes](wiki/getting-started/permissions#mystery-boxes)
+- [Mystery Vault Animations](wiki/getting-started/permissions#mystery-vault-animations)
+
+If you do not know how to setup permissions for "default" rank player, you can refer [Permission for begineers](wiki/getting-started/permissions#permission-for-beginners).
+
+## Why do player get Mystery Box occasionally?
+
+GadgetsMenu offers a feature called Mystery Box Reward, which gives player Mystery Box when they reach certain amount of play time in the server.
+
+You can disable or change the reward setting in `mystery boxes.yml` file.
+
+- `mystery boxes/mystery boxes.yml`
+```yaml
+Mystery-Boxes-Reward:
+  Enabled: true
+  Allow-AFK: false
+  Chance-To-Get-Mystery-Box: 75
+  Chance:
+    One-Star: 5
+    Two-Star: 10
+    Three-Star: 60
+    Four-Star: 20
+    Five-Star: 5
+  Expiry-Date-In-Days: 7
+  Play-Time:
+    Hours: 0
+    Minutes: 40
+    Seconds: 0
+  Enabled-Worlds:
+  - '*'
+  Message:
+    One-Star: '&fYou found a &e✰&7✰✰✰✰ &fMystery Box!'
+    Two-Star: '&fYou found a &e✰✰&7✰✰✰ &fMystery Box!'
+    Three-Star: '&fYou found a &e✰✰✰&7✰✰ &fMystery Box!'
+    Four-Star: '&fYou found a &e✰✰✰✰&7✰ &fMystery Box!'
+    Five-Star: '&fYou found a &e✰✰✰✰✰ &fMystery Box!'
+```
+
+> **Note:** With GadgetsMenu (Premium), it saves player's play time in the database and provide an option to toggle play time counting while player is AFK.
+
+## How to give player pet items?
+
+You can give player Mystery Gifts via this command:
+ - `/gmenu petitems`
+
+Execute the above command will list out all the available sub commands. You can use `TAB` key to help you to auto-fill the required value. 
+
+**Sub Commands:**
+- `/gmenu petitems add <item> <player> <amount>` - Add pet items to player.
+- `/gmenu petitems check <player>` - Check player's pet items.
+- `/gmenu petitems remove <item> <player> <amount>` - Remove pet items from player.
+- `/gmenu petitems set <player> <amount>` - Set player's pet items.
+
+**Example:**
+- `/gmenu petitems add Apple Notch 10`
+- `/gmenu petitems check Notch`
+- `/gmenu petitems remove Water Notch 3`
+- `/gmenu petitems set Stick Notch 25`
+
+[Click here for more info about the command](wiki/getting-started/commands/general#gmenu-petitems)
+
+## What are the ways for players to obtain pet items?
+
+Currently, there are two ways for players to obtain pet items:
+1. By opening Mystery Boxes, player would gain certain amount of pet items varies from the quality of Mystery Box.
+2. Give player pet items by command `/gmenu petitems`.
+
+## Why does my Mystery Vault only show two lines of holograms instead of three?
+
+![Mystery Vault holograms](/assets/gadgetsmenu-docs/images/getting-started/faq-mystery-vault-hologram-not-show-solution.jpg "[Wrapper] Mystery Vault holograms")
+
+In general, Mystery Vault should have 3 lines of holograms display on top of it. If you facing an issue where your Mystery Vault only show two lines of holograms as what you see in the below image:
+
+![Mystery Vault hologram not showing](/assets/gadgetsmenu-docs/images/getting-started/faq-mystery-vault-hologram-not-show.jpg "[Wrapper] Mystery Vault hologram not showing")
+
+What you need to do is add [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) plugin into your server. The additional hologram requires ProtocolLib plugin to activate. Once you have that plugin, the hologram will show up automatically unless you have an incompatible version of ProtocolLib plugin that not supports your server version.
+
+## Why is my Mystery Vault hologram not working properly?
+
+![Mystery Vault hologram not working properly](/assets/gadgetsmenu-docs/images/getting-started/faq-mystery-vault-hologram-not-working-properly.png "[Wrapper] Mystery Vault hologram not working properly")
+
+Your Mystery Vault hologram isn't working and directly show the placeholder, similar to the image above?
+
+No worries! This issue occurred when you are using the outdated version of ProtocolLib plugin. You have to update your [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) plugin to the latest build and make sure that it supports your server version.

@@ -44,7 +44,7 @@ The argument syntax to be used in the command:
 **Arguments:**
 - `msg=false` - Will not send message to the player when they receive mystery gifts.
 
-**Examples:**
+**Example:**
 - `/gmysteryboxes gift Notch 1`
 - `/gmysteryboxes gift Notch 1 msg=false` - Give mystery gifts to a player without sending any notification messages.
 
@@ -74,7 +74,7 @@ The argument syntax to be used in the command:
    - Please note that you must fill in all available qualities (1 - 5). Missing one will throw an error.
    - The total chances among all qualities can be greater than 100 or less than 100.
 
-**Examples:**
+**Example:**
 - `/gmysteryboxes give Notch 1` - Give player 1 Mystery Box with random quality.
 - `/gmysteryboxes give Notch 1 5` - Give player a 5-star Mystery Box.
 - `/gmysteryboxes give Notch 1 5 ex=3d` - Give player a 5-star Mystery Box with 3 days expiration.
@@ -107,7 +107,7 @@ The argument syntax to be used in the command:
    - Please note that you must fill in all available qualities (1 - 5). Missing one will throw an error.
    - The total chances among all qualities can be greater than 100 or less than 100.
 
-**Examples:**
+**Example:**
 - `/gmysteryboxes giveall 1` - Give all online players 1 Mystery Box with random quality.
 - `/gmysteryboxes giveall 1 5` - Give all online players a 5-star Mystery Box.
 - `/gmysteryboxes giveall 1 5 ex=3d` - Give all online players a 5-star Mystery Box with 3 days expiration.
@@ -184,7 +184,7 @@ The argument syntax to be used in the command:
 
 **Usable in Console:** No
 
-**Examples:**
+**Example:**
 - `/gmysteryboxes mode remove-vault` - Remove Mystery Vault by looking at the Mystery Vault.
 - `/gmysteryboxes mode remove-vault vault_1` - Remove specific Mystery Vault by name.
 - `/gmysteryboxes mode remove-vault r:3` - Remove nearby Mystery Vault by radius.
