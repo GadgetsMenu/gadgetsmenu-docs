@@ -10,6 +10,8 @@ topics:
 
 These are the available Particle Effects you can use as custom particles.
 
+It should be noted that if your server version is 1.11, you can only use the particle effects under the 1.8 - 1.11 list. And so on, if your server version is 1.19, you may use the particle effects under the 1.8 - 1.19 list.
+
 ## Particle Effect List
 <div class="md-tab-wrapper">
     <div class="md-tab-header">
