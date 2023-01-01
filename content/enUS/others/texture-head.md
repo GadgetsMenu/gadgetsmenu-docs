@@ -1,6 +1,6 @@
 ---
 title: Texture Head
-description: You can find the methods to get the head texture URL here.
+description: You can find the methods to get the texture head URL here.
 group: others
 keywords: texture head
 topics:

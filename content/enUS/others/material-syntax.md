@@ -1,13 +1,13 @@
 ---
 title: Material Syntax
-description: You can find the potion ID to make this potion as GUI menu item.
+description: You can find all supported material syntax for GadgetsMenu menu item. You can use block, player head, potion, colored leather armor and custom model data as item material.
 group: others
 keywords: material syntax
 topics:
  - material syntax
 ---
 
-Want to use potion as material for GUI menu item? Check the list below to create associated potion items.
+Regardless of your server version, you must follow the material syntax when configuring item materials. Otherwise, you may encounter some errors or the item may not display correctly.
 
 ## Material
 
