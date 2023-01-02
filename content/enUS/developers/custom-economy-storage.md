@@ -1,6 +1,6 @@
 ---
 title: Custom Economy Storage
-description: 
+description: You can use the custom economy storage API to hook Mystery Dust with your own economy system.
 group: developers
 keywords: custom economy storage,api
 topics:

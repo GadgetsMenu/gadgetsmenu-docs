@@ -1,6 +1,6 @@
 ---
 title: Placeholders
-description: 
+description: You can use these placeholders to display player information, including the amount of Mystery Dust, Mystery Boxes, the number of unlocked cosmetic items and equipped cosmetics, etc.
 group: setup
 keywords: placeholders
 topics:
@@ -89,7 +89,7 @@ ex: {placeholderapi_gadgetsmenu_mystery_dust}
 | `%gadgetsmenu_unlocked_<cosmetic>_percentages%` | `<cosmetic>` | Get the percentages of specific cosmetic that player has unlocked. | `%gadgetsmenu_unlocked_hats_percentages%`, `%gadgetsmenu_unlocked_animated_hats_percentages%`, `%gadgetsmenu_unlocked_particles_percentages%`, `%gadgetsmenu_unlocked_suits_percentages%`, `%gadgetsmenu_unlocked_gadgets_percentages%`, `%gadgetsmenu_unlocked_pets_percentages%`, `%gadgetsmenu_unlocked_miniatures_percentages%`, `%gadgetsmenu_unlocked_morphs_percentages%`, `%gadgetsmenu_unlocked_banners_percentages%`, `%gadgetsmenu_unlocked_emotes_percentages%`, `%gadgetsmenu_unlocked_cloaks_percentages%` |
 </div>
 
-### Equipped Cosmetic Items
+### Equipped Cosmetics
 <div class="md-table-max-content md-table-no-bg-color md-table-width-100 md-table-column-4-width-25">
 
 | Placeholder                          | Argument           | Description               | Example                       |
