@@ -1,6 +1,6 @@
 ---
 title: Custom Hats
-description: 
+description: GadgetsMenu allows you to make your own hats using player heads or common material blocks.
 group: custom-cosmetic-items
 keywords: custom hats, custom cosmetic item
 topics:
@@ -8,9 +8,9 @@ topics:
  - custom cosmetic item
 ---
 
-You are able to create your own hats in 'custom hats.yml' file.
+You are able to create your own hats in `custom cosmetics/custom hats.yml` file.
 
->[Warning] {{title: Warning}} Make sure you have read the whole page before creating your own hats.
+>[Warning] {{title: Warning}} Make sure you have read the whole page before making the custom hats.
 
 ## Configuration
 ```yaml
@@ -33,7 +33,7 @@ Custom-Hats:
 
     # This is the texture of the head that are stored in Mojang's database.
     # Simply paste the url right here.
-    Texture: http://textures.minecraft.net/texture/eb7af9e4411217c7de9c60acbd3c3fd6519783332a1b3bc56fbfce90721ef35
+    Texture: eb7af9e4411217c7de9c60acbd3c3fd6519783332a1b3bc56fbfce90721ef35
 
     # Set to true will able player to equip it.
     Enabled: false
@@ -84,8 +84,9 @@ Custom-Hats:
       Unlocked: ''
 ```
 
-## Further reading
-<div class="md-further-reading">
+## Relevant content
+<div class="md-relevant-content">
 
 - [Texture Head](../wiki/others/texture-head)
+- [Material Syntax](../wiki/others/material-syntax)
 </div>
