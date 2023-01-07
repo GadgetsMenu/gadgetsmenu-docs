@@ -1,6 +1,6 @@
 ---
 title: Custom Hats
-description: GadgetsMenu allows you to make your own hats using player heads or common material blocks.
+description: GadgetsMenu allows you to make your own hats using player heads or material blocks.
 group: custom-cosmetic-items
 keywords: custom hats, custom cosmetic item
 topics:
@@ -8,9 +8,9 @@ topics:
  - custom cosmetic item
 ---
 
-You are able to create your own hats in `custom cosmetics/custom hats.yml` file.
+You can create your own hats in `custom cosmetics/custom hats.yml` file.
 
->[Warning] {{title: Warning}} Make sure you have read the whole page before making the custom hats.
+>[Warning] {{title: Warning}} Make sure you have read the whole page before setup the custom hats.
 
 ## Configuration
 ```yaml
