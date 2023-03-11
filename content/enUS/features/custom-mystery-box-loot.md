@@ -1,8 +1,19 @@
+---
+title: Custom Mystery Box Loot
+description: You can create any number of custom mystery box loot to increase the player's fun with the mystery box.
+group: features
+keywords: mystery box loot, loot, custom reward
+topics:
+ - mystery box loot
+ - loot
+ - custom reward
+---
 
+You can create and configure custom Mystery Box loot in `custom loots.yml` file which located in `mystery boxes` folder. You can set the category and the rarity of the custom loot and most importantly you can configure custom commands which it will be executed when player found the loot.
 
-With Premium version, you will be able to create custom mystery boxes loot in `custom loots.yml` file where the file located in `mystery boxes` folder.
+>**Note:** This feature is currently only available in GadgetsMenu Premium.
 
-Sample of `custom loots.yml` file:
+## Configuration
 ```yaml
 Custom-Loots:
   # The name that saved in database.
@@ -42,7 +53,7 @@ Custom-Loots:
 3. Set `CanBeFound` to `true` if you want to enable the custom loot.
 4. Set the commands you want to execute when player get this loot.
 
-Sample
+### Example
 ```yaml
 Custom-Loot1:
     Name: '&aCustom Loot 1'

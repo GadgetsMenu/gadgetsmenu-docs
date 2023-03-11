@@ -1,50 +1,81 @@
+---
+title: Cosmetic Purchase Price Discount
+description: You can grant your ranked player with different discount rate when purchase cosmetic item and craft Mystery Box.
+group: features
+keywords: cosmetic purchase price discount, discount group, item discount
+topics:
+ - cosmetic purchase price discount, 
+ - discount group
+ - item discount
+---
 
-## Settings
+An item discount reduces the price of crafted Mystery Boxes & cosmetic items for the players who have the permission.
+Here is the part of the config in which you can change these discounts.
+
+## Configuration
 ```yaml
-Cosmetic-Item-Purchase:
-
-  # Set to true allows player to purchase cosmetic items.
+# Discount the cost of an item when player purchase.
+Item-Cost-Discount:
+  # Set to true will enable item cost discount.
   Enabled: true
-
-  # Set the storage where do you want to save mystery dust.
-  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault'.
-  # 'default' represent follow player data storage.
-  Mystery-Dust-Storage: default
-
-  # Set to true will allows player to purchase specified cosmetic.
-  Enabled-Cosmetics:
-    Hats: true
-    Animated Hats: true
-    Particles: true
-    Suits: true
-    Gadgets: true
-    Pets: true
-    Morphs: true
-    Banners: true
-    Emotes: true
-    Cloaks: true
-
-  # Reopen GUI menu after player purchase item.
-  Reopen-GUI-Menu-After-Purchase: true
-
-  # This is the command when player purchase cosmetic items.
-  # This command is depends on your permission plugin.
-  Execute-Command: pex user {PLAYER} add {PERMISSION}
+  # Which item do you want to enable item cost discount?
+  Discount:
+    Cosmetic-Item: true
+    Crafting-Mystery-Box: true
+  # You can add more discount rate by reference example.
+  Discount-Rates:
+    # The name of the discount group.
+    # The name is use for placeholder to get the cost after discount.
+    # Placeholder Syntax: {<name>_COST}
+    # Get the cost of that discount rate.
+    VIP:
+      # Higher numbers override.
+      Priority: 1
+      # The permission to granted discount.
+      Permission: gadgetsmenu.discount.VIP
+      # Discount rates.
+      Rate: 20
+      Lore:
+        Enough-Mystery-Dust:
+        - ''
+        - '&8&mRegular: {COST} Mystery Dust!'
+        - "&aVIP&7: &a{VIP_COST} &7Mystery Dust (&a20% &7OFF!) &e\u25C0"
+        - '&cMVP: {MVP_COST} Mystery Dust (40% OFF!)'
+        - ''
+        - '&7Your Cost: &a{VIP_COST} &7Mystery Dust'
+        - '&eClick to craft!'
+        Not-Enough-Mystery-Dust:
+        - ''
+        - '&8&mRegular: {COST} Mystery Dust!'
+        - "&aVIP&7: &a{VIP_COST} &7Mystery Dust (&a20% &7OFF!) &e\u25C0"
+        - '&cMVP: {MVP_COST} Mystery Dust (40% OFF!)'
+        - ''
+        - '&7Your Cost: &c{VIP_COST} &7Mystery Dust'
+        - '&cYou need &b{COST_LEFT} &cmore mystery dust!'
+    MVP:
+      Priority: 2
+      Permission: gadgetsmenu.discount.MVP
+      Rate: 40
+      Lore:
+        Enough-Mystery-Dust:
+        - ''
+        - '&8&mRegular: {COST} Mystery Dust!'
+        - '&8&mVIP: {VIP_COST} Mystery Dust (20% OFF!)'
+        - "&bMVP&7: &a{MVP_COST} &7Mystery Dust (&a40% &7OFF!) &e\u25C0"
+        - ''
+        - '&7Your Cost: &a{MVP_COST} &7Mystery Dust'
+        - '&eClick to craft!'
+        Not-Enough-Mystery-Dust:
+        - ''
+        - '&8&mRegular: {COST} Mystery Dust!'
+        - '&8&mVIP: {VIP_COST} Mystery Dust (20% OFF!)'
+        - "&bMVP&7: &a{MVP_COST} &7Mystery Dust (&a40% &7OFF!) &e\u25C0"
+        - ''
+        - '&7Your Cost: &a{MVP_COST} &7Mystery Dust'
+        - '&cYou need &b{COST_LEFT} &cmore mystery dust!'
 ```
 
-## Steps to purchase cosmetic item
+The higher the `Priority` value is, the higher discount rate will be placed. For example, a discount with `priority 2` will override a discount with `priority 1` if a player has both permissions.
 
-**Step 1:** (Choose a cosmetic item that you want to purchase)
-
-![Step 1](https://i.imgur.com/dYtJb65.png)
-
-
-**Step 2:** (Click `Confirm` or `Cancel` purchase)
-
-![Step 2](https://imgur.com/222pTtY.png)
-![Step 2](https://imgur.com/gFngP8l.png)
-
-
-**Step 3:** (You have your item now)
-
-![Step 3](https://imgur.com/D7YlFT1.png)
+- The `{COST}` value represents the regular cost.
+- The `{COST_LEFT}` value represents the cost that the player still needs to get in order to buy the item.
