@@ -31,7 +31,7 @@ import com.yapzhenyie.GadgetsMenu.player.OfflinePlayerManager;
 public class Economy_CustomEconomy extends GEconomyProvider {
 
 	public Economy_CustomEconomy(CustomEconomyMain yourPlugin) {
-                //Plugin plugin, your storage name
+        //Plugin plugin, your storage name
 		super(yourPlugin, "Custom-Storage");
 	}
 
@@ -42,20 +42,20 @@ public class Economy_CustomEconomy extends GEconomyProvider {
 
 	@Override
 	public boolean addMysteryDust(OfflinePlayerManager pManager, int amount) {
-               // Add your code here.
-               return true; // Return true when the transaction is successful, otherwise return false.
+		// Add your code here.
+		return true; // Return true when the transaction is successful, otherwise return false.
 	}
 
 	@Override
 	public boolean setMysteryDust(OfflinePlayerManager pManager, int amount) {
-               // Add your code here.
-               return true; // Return true when the transaction is successful, otherwise return false.
+		// Add your code here.
+		return true; // Return true when the transaction is successful, otherwise return false.
 	}
 
 	@Override
 	public boolean removeMysteryDust(OfflinePlayerManager pManager, int amount) {
-               // Add your code here.
-               return true; // Return true when the transaction is successful, otherwise return false.
+		// Add your code here.
+		return true; // Return true when the transaction is successful, otherwise return false.
 	}
 }
 ```
@@ -67,13 +67,14 @@ public class Economy_CustomEconomy extends GEconomyProvider {
 import com.yapzhenyie.GadgetsMenu.economy.GEconomyProvider;
 
 public class CustomEconomyMain extends JavaPlugin {
+	
 	@Override
 	public void onEnable() {
-              if(Bukkit.getPluginManager().isPluginEnabled("GadgetsMenu")) {
-                    // Set Mystery Dust Storage.
-                    GEconomyProvider.setMysteryDustStorage(new Economy_CustomEconomy(this));
-              }
-        }
+		if(Bukkit.getPluginManager().isPluginEnabled("GadgetsMenu")) {
+			// Set Mystery Dust Storage.
+			GEconomyProvider.setMysteryDustStorage(new Economy_CustomEconomy(this));
+		}
+	}
 }
 ```
 
