@@ -84,11 +84,11 @@ To use [GadgetsMenu placeholders](wiki/setup/placeholders), you're not required 
 
 >**Note:** Make sure the plugin you use support PlaceholderAPI and has enabled PlaceholderAPI usage.
 
-## I have purchased a cosmetic item via Mystery Dust or found a cosmetic item from opening Mystery Box, but they still can’t access that cosmetic item?
+## I have purchased a cosmetic item via Mystery Dust or found a cosmetic item by opening Mystery Box, but they still can’t access that cosmetic item?
 
 #### Free version
 
-GadgetsMenu Free version does not save unlocked cosmetic items in it’s database. When player purchase a cosmetic item or found a cosmetic item from opening Mystery Box, GadgetsMenu executes a command to grant the player a permission to access the cosmetic item.
+GadgetsMenu Free version does not save unlocked cosmetic items in it’s database. When player purchase a cosmetic item or found a cosmetic item by opening Mystery Box, GadgetsMenu executes a command to grant the player a permission to access the cosmetic item.
 
 Therefore, you need to have a permissions plugin to handle player's permissions. Depending on the permission plugin you use, you need to set the command so that GadgetsMenu plugin will execute the correct command for granting the permissions.
 
