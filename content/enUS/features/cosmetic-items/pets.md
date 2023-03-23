@@ -1,6 +1,6 @@
 ---
 title: Pets
-description:
+description: Feeling alone? Summon pets to accompany you, provide you with warmth, and increase your gaming experience.
 group: cosmetic-items
 keywords: cosmetic items, pets
 topics:
