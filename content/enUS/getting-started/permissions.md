@@ -614,6 +614,22 @@ gadgetsmenu.pets.cat.*
   gadgetsmenu.pets.babysiamesecat
   gadgetsmenu.pets.wildocelot
   gadgetsmenu.pets.babywildocelot
+  gadgetsmenu.pets.tabbycat
+  gadgetsmenu.pets.babytabbycat
+  gadgetsmenu.pets.britishshorthaircat
+  gadgetsmenu.pets.babybritishshorthaircat
+  gadgetsmenu.pets.calicocat
+  gadgetsmenu.pets.babycalicocat
+  gadgetsmenu.pets.persiancat
+  gadgetsmenu.pets.babypersiancat
+  gadgetsmenu.pets.ragdollcat
+  gadgetsmenu.pets.babyragdollcat
+  gadgetsmenu.pets.whitecat
+  gadgetsmenu.pets.babywhitecat
+  gadgetsmenu.pets.jelliecat
+  gadgetsmenu.pets.babyjelliecat
+  gadgetsmenu.pets.allblackcat
+  gadgetsmenu.pets.babyallblackcat
 
 gadgetsmenu.pets.zombie.*
   gadgetsmenu.pets.zombie
@@ -836,6 +852,14 @@ gadgetsmenu.pets.tadpole.*
 
 gadgetsmenu.pets.warden.*
   gadgetsmenu.pets.warden
+
+gadgetsmenu.pets.bee.*
+  gadgetsmenu.pets.bee
+  gadgetsmenu.pets.babybee
+  gadgetsmenu.pets.angrybee
+  gadgetsmenu.pets.babyangrybee
+  gadgetsmenu.pets.rollingbee
+  gadgetsmenu.pets.babyrollingbee
 ```
 
 ## Miniatures
