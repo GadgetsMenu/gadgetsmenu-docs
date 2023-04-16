@@ -125,5 +125,3 @@ Emotes: </p>
 
 Cloaks: </p>
 ![Cloaks](https://i.imgur.com/5QVpIn4.png)
-
-Go to the [top](#gadgetsmenu-wiki) of the page
