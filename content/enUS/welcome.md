@@ -92,15 +92,15 @@ Animated Hats: </p>
 <p> </p>
 
 Particles: </p>
-![Particles](http://i.imgur.com/aEodTtA.png)
+![Particles](https://i.imgur.com/aEodTtA.png)
 <p> </p>
 
 Suits: </p>
-![Suits](http://i.imgur.com/GMJ8LEK.png)
+![Suits](https://i.imgur.com/GMJ8LEK.png)
 <p> </p>
 
 Gadgets: </p>
-![Gadgets](http://i.imgur.com/B3MOYUK.png)
+![Gadgets](https://i.imgur.com/B3MOYUK.png)
 <p> </p>
 
 Pets: </p>
@@ -112,7 +112,7 @@ Miniatures [PREMIUM] </p>
 <p> </p>
 
 Morphs: </p>
-![Morphs](http://i.imgur.com/r5sM6YE.png)
+![Morphs](https://i.imgur.com/r5sM6YE.png)
 <p> </p>
 
 Banners: </p>
