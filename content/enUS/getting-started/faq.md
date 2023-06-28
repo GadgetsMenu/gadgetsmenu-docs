@@ -310,3 +310,11 @@ What you need to do is add [ProtocolLib](https://www.spigotmc.org/resources/prot
 Your Mystery Vault hologram isn't working and directly show the placeholder, similar to the image above?
 
 No worries! This issue occurred when you are using the outdated version of ProtocolLib plugin. You have to update your [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/) plugin to the latest build and make sure that it supports your server version.
+
+## Why are some morphs not visible to me even with Self Morph View enabled?
+
+If your morphs aren't displaying, please make sure that the following attribute is set to `true` within the `players.yml` file in the LibsDisguises folder.
+
+```yaml
+TallSelfDisguises: true
+```
