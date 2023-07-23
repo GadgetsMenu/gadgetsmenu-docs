@@ -860,6 +860,14 @@ gadgetsmenu.pets.bee.*
   gadgetsmenu.pets.babyangrybee
   gadgetsmenu.pets.rollingbee
   gadgetsmenu.pets.babyrollingbee
+
+gadgetsmenu.pets.camel.*
+  gadgetsmenu.pets.camel
+  gadgetsmenu.pets.babycamel
+
+gadgetsmenu.pets.sniffer.*
+  gadgetsmenu.pets.sniffer
+  gadgetsmenu.pets.babysniffer
 ```
 
 ## Miniatures
