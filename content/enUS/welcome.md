@@ -36,7 +36,7 @@ topics:
 - Supported [Placeholders](../wiki/setup/placeholders) for plugins that supports PlaceholderAPI placeholders. (Requires [PlaceholderAPI](../wiki/setup/placeholders))
 - Automatically check for new updates.
 - Provide developer [API](../wiki/developers/developer-api).
-- Supported spigot version 1.8.8, 1.12, 1.13.2, 1.14, 1.15, 1.16, 1.17, 1.18 & 1.19.
+- Supported spigot version 1.8.8, 1.12, 1.13.2, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19 & 1.20.
 - Provide [FREE](https://www.spigotmc.org/resources/10885/) & [PREMIUM](https://www.spigotmc.org/resources/62831/) version.
 
 ## Download
