@@ -54,7 +54,7 @@ Material: 'POTION:8193'
 Material: 'LEATHER_HELMET:#FF0000'
 ```
 
-## Custom Model Data (Premium Only)
+## Custom Model Data
 
 **Format:**
 ```yaml
