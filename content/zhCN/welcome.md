@@ -7,7 +7,7 @@ topics:
  - 欢迎
 ---
 
-## 特征
+## 特征 ${features}
 - Contains lots of cosmetics such as **Hats**, **Animated Hats**, **Particles**, **Suits**, **Gadgets**, **Pets**, **Miniatures [PREMIUM]**, **Morphs**, **Banners**, **Emotes** & **Cloaks**.
 - More than **530+** cosmetic items can be unlocked.
 - You can create your **own cosmetic items**! ([Hats](../wiki/features/custom-cosmetic-items/custom-hats), [Animated Hats](../wiki/features/custom-cosmetic-items/custom-animated-hats), [Particles](../wiki/features/custom-cosmetic-items/custom-particles), [Banners](../wiki/features/custom-cosmetic-items/custom-banners) & [Emotes](../wiki/features/custom-cosmetic-items/custom-emotes))
@@ -33,7 +33,7 @@ topics:
 - Cosmetic usage can be disabled in certain regions. (Requires [WorldGuard](https://dev.bukkit.org/projects/worldguard))
 - Automatically **sync selected cosmetics** when player log into the server. Supported for multiple servers too. (Required MySQL enabled)
 - 2 different ways to store player data. (SQLite & MySQL)
-- Supported [Placeholders](../wiki/setup/placeholders) for plugins that supports PlaceholderAPI placeholders. (Requires [PlaceholderAPI](../wiki/setup/placeholders))
+- 支持 PlaceholderAPI 插件的[占位符](../wiki/setup/placeholders)。(需要 [PlaceholderAPI](../wiki/setup/placeholders))
 - 自动检查版本更新。
 - 提供开发者[API](../wiki/developers/developer-api)。
 - 支持 1.8.8, 1.12, 1.13.2, 1.14, 1.15, 1.16, 1.17, 1.18, 1.19 & 1.20 Spigot 版本。
