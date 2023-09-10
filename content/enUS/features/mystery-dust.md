@@ -25,7 +25,7 @@ What you need to do is simply replace the value of `Mystery-Dust-Storage` with t
 ```yaml
 Cosmetic-Item-Purchase:
   # Set the storage where do you want to save mystery dust.
-  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault'.
+  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault', 'tokenmanager'.
   # 'default' represent follow player data storage.
   Mystery-Dust-Storage: default
 ```

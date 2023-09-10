@@ -36,7 +36,7 @@ Cosmetic-Item-Purchase:
   # Set to true allows player to purchase cosmetic items.
   Enabled: true
   # Set the storage where do you want to save mystery dust.
-  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault'.
+  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault', 'tokenmanager'.
   # 'default' represent follow player data storage.
   Mystery-Dust-Storage: default
   # Set to true will allows player to purchase specified cosmetic.
@@ -148,7 +148,7 @@ Cosmetic-Item-Purchase:
   # Set to true allows player to purchase cosmetic items.
   Enabled: true
   # Set the storage where do you want to save mystery dust.
-  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault'.
+  # Available storages: 'default', 'coinsapi', 'playerpoints', 'vault', 'tokenmanager'.
   # 'default' represent follow player data storage.
   Mystery-Dust-Storage: default
   # Set to true will allows player to purchase specified cosmetic.
@@ -226,7 +226,7 @@ Menu-Item:
   # The name of the selector.
   Name: '&aGadgetsMenu'
   # The material of the selector.
-  # Material: https://github.com/OnlyNoobDied/GadgetsMenu/wiki/Material-Syntax
+  # Material: https://gadgetsmenu.net/wiki/others/material-syntax
   Material: NETHER_STAR
   # Slot: 0-8
   Slot: 4
@@ -295,7 +295,7 @@ Permission:
     # Set to true, will play sound 
     # when player select the item.
     #
-    # Sounds: https://github.com/OnlyNoobDied/GadgetsMenu/wiki/Sounds
+    # Sounds: https://gadgetsmenu.net/wiki/others/sounds
     Play-Sound:
       Enabled: true
       Sound: ENTITY_ENDERMAN_TELEPORT
@@ -313,7 +313,7 @@ Permission:
     # Set to true, will play sound 
     # when player select the item.
     #
-    # Sounds: https://github.com/OnlyNoobDied/GadgetsMenu/wiki/Sounds
+    # Sounds: https://gadgetsmenu.net/wiki/others/sounds
     Play-Sound:
       Enabled: true
       Sound: ENTITY_EXPERIENCE_ORB_PICKUP
@@ -437,30 +437,39 @@ Anti-Lag:
     # Disable the usage of cosmetics.
     Disable-Usage: true
 
-# Player does not allow to use cosmetics in these regions. (Require WorldGuard)
-Blacklisted-Regions:
-  Disable-All-Cosmetics:
-  - region1
-  - region2
-  - region3
-  Disable-Hats: ''
-  Disable-Animated-Hats: ''
-  Disable-Particles: ''
-  Disable-Suits: ''
-  Disable-Gadgets: ''
-  Disable-Pets: ''
-  Disable-Miniatures: ''
-  Disable-Morphs: ''
-  Disable-Banners: ''
-  Disable-Emotes: ''
-  Disable-Cloaks: ''
-  Disable-Pet-Riding: ''
+# Blacklisted region
+# Disable cosmetic usage in the configured regions.
+# Require WorldGuard plugin.
+Blacklisted-Region:
+  Enabled: true
+  # Set 'Reverse-Whitelist' as true will change to whitelisted region.
+  # Whitelisted region: Enable cosmetic usage only in the configured regions.
+  Reverse-Whitelist: false
+  # Format: [region_id]:[world_name|*]
+  # Example: region:world1
+  Region:
+    All-Cosmetics:
+    - region1:*
+    - region2:world1
+    - region3:world2
+    Hats: ''
+    Animated-Hats: ''
+    Particles: ''
+    Suits: ''
+    Gadgets: ''
+    Pets: ''
+    Miniatures: ''
+    Morphs: ''
+    Banners: ''
+    Emotes: ''
+    Cloaks: ''
+    Pet-Riding: ''
 
 # Check for updates if you set to true.
 Check-Update: true
 
 # Do not edit this.
-Config-Version: 2.0.3
+Config-Version: 2.0.8
 ```
 
 ## Frequently asked questions
