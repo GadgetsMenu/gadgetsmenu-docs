@@ -17,22 +17,22 @@ Looking for a sound but not sure what is the name? Check the link below to view 
 **Format:**
 ```yaml
 # Sound Format: [Sound]
-# Volumn and Pitch will be default as 1.0
+# Volume and Pitch will be default as 1.0
 Sound: 'ENTITY_EXPERIENCE_ORB_PICKUP'
 ```
 
-## Sound with Volumn
+## Sound with Volume
 **Format:**
 ```yaml
-# Sound Format: [Sound]:[volumn]
+# Sound Format: [Sound]:[volume]
 # Pitch will be default as 1.0
 Sound: 'ENTITY_EXPERIENCE_ORB_PICKUP:0.5'
 ```
 
-## Sound with Volumn and Pitch
+## Sound with Volume and Pitch
 **Format:**
 ```yaml
-# Sound Format: [Sound]:[volumn]:[pitch]
+# Sound Format: [Sound]:[volume]:[pitch]
 # Pitch range: 0.0 - 2.0
 Sound: 'ENTITY_EXPERIENCE_ORB_PICKUP:1:2.0'
 ```
