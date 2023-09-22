@@ -315,6 +315,7 @@ No worries! This issue occurred when you are using the outdated version of Proto
 
 If your morphs aren't displaying, please make sure that the following attribute is set to `true` within the `players.yml` file in the LibsDisguises folder.
 
+**LibsDisguises/configs/players.yml**
 ```yaml
 TallSelfDisguises: true
 ```

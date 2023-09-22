@@ -28,6 +28,7 @@ It should be noted that if your server version is 1.11, you can only use the par
             <button class="md-tab" type="button" data-tab-target="#tab-pane-1-16">1.16</button>
             <button class="md-tab" type="button" data-tab-target="#tab-pane-1-17">1.17</button>
             <button class="md-tab" type="button" data-tab-target="#tab-pane-1-19">1.19</button>
+            <button class="md-tab" type="button" data-tab-target="#tab-pane-1-20">1.20</button>
             <div class="md-tab-indicator"></div>
         </div>
     </div>
@@ -165,6 +166,12 @@ SCULK_SOUL
 SCULK_CHARGE
 SCULK_CHARGE_POP
 SHRIEK
+```
+</div>
+<div class="md-tab-body-content" id="tab-pane-1-20">
+
+```yaml
+CHERRY_LEAVES
 ```
 </div>
 </div>

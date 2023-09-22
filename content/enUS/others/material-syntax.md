@@ -32,6 +32,17 @@ Material: RED_STAINED_GLASS_PANE
 Material: 'head:292009a4925b58f02c77dadc3ecef07ea4c7472f64e0fdc32ce5522489362680'
 ```
 
+### Owner Head
+To show the current player head.
+
+> Since: 5.10.0 [Premium]
+
+**Format:**
+```yaml
+# Material Format: [head]:[OWNER_HEAD]
+Material: 'head:OWNER_HEAD
+```
+
 ## Potion
 
 - Relevant Link: [Potions](../wiki/others/potions)
@@ -54,10 +65,20 @@ Material: 'POTION:8193'
 Material: 'LEATHER_HELMET:#FF0000'
 ```
 
-## Custom Model Data (Premium Only)
+## Custom Model Data
+
+### General Material
 
 **Format:**
 ```yaml
-# Material Format: [custommodeldata]:<material>:<modeldata>
+# Material Format: [custommodeldata]:[material]:[model data]
 Material: 'custommodeldata:IRON_INGOT:123456'
+```
+
+### Leather Armor / Potion
+
+**Format:**
+```yaml
+# Material Format: [custommodeldata]:[material]:[model data]:[Hex Color Code|Potion ID]
+Material: 'custommodeldata:LEATHER_HELMET:123456:#FFFFFF'
 ```
