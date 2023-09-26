@@ -11,7 +11,7 @@ GadgetsMenu offers a few placeholders for those plugins who supported [Placehold
 
 You're not required to download any expansion from ecloud, you can directly use these placeholders, as long as your server has GadgetsMenu plugin.
 
-> **Note:** These placeholders are not available in GadgetsMenu itself.
+> **Note:** These placeholders are also usable in GadgetsMenu. You may use these placeholders in GadgetsMenu's configuration files.
 
 ## PlaceholderAPI
 
@@ -36,12 +36,42 @@ ex: {placeholderapi_gadgetsmenu_mystery_dust}
 | ------------------------------------ |:------------------:| ------------------------- | ----------------------------- |
 | `%gadgetsmenu_mystery_dust%` | | Gets the player's mystery dust. | |
 | `%gadgetsmenu_mystery_boxes%` | | Gets the player's mystery boxes. | |
-| `%gadgetsmenu_<type>_pet_name%` | `<type>` | Gets the name of the pet. (Requires Premium version 4.5.0+) | `%gadgetsmenu_baby_pig_pet_name%`, `%gadgetsmenu_wolf_pet_name%` |
-| `%gadgetsmenu_current_pet_name%` | | Gets the name of current spawned pet. (Requires Premium version 4.5.0+) | |
-| `%gadgetsmenu_current_pet_level%` | | Gets the current level of the spawned pet. (Requires Premium version 4.5.0+) | |
-| `%gadgetsmenu_current_pet_exp_obtained%` | | Gets the experience obtained of the current level of the spawned pet. (Requires Premium version 4.5.0+) | |
-| `%gadgetsmenu_current_pet_exp_max%` | | Gets the maximum experience of the current level of the spawned pet. (Requires Premium version 5.2.0+) | |
-| `%gadgetsmenu_pet_name%` | | Gets the name of the pet. (Deprecated) | |
+| `%gadgetsmenu_<type>_pet_name%` | `<type>` | Gets the name of the pet. (Deprecated) | Note: Will be removed in version 5.20.0 |
+| `%gadgetsmenu_pet_name%` | | Gets the name of the pet. (Deprecated) | Note: Will be removed in version 5.20.0 |
+</div>
+
+### Pet's Information
+These placeholders will returns the pet's information. You can use the `Current Spawned Pet` specific placeholders to display the pet's information of the current spawned pet; or use the `Specify Pet Type` placeholders to specify which pet data you want to display.
+
+> **Note:** These placeholders only available in the premium version.
+
+#### Current Spawned Pet
+
+<div class="md-table-max-content md-table-no-bg-color md-table-width-100 md-table-column-4-width-25">
+
+| Placeholder | Description |
+| - | - |
+| `%gadgetsmenu_current_pet_name%` | Return the name of current spawned pet. |
+| `%gadgetsmenu_current_pet_level%` | Return the current level of the spawned pet. |
+| `%gadgetsmenu_current_pet_exp_obtained%` | Return the experience obtained of the current level of the spawned pet. |
+| `%gadgetsmenu_current_pet_exp_max%` | Return the maximum experience of the current level of the spawned pet. |
+| `%gadgetsmenu_current_pet_attribute_hunger%` | Return the current pet's hunger level. |
+| `%gadgetsmenu_current_pet_attribute_thirst%` | Return the current pet's thirst level. |
+| `%gadgetsmenu_current_pet_attribute_exercise%` | Return the current pet's exercise level. |
+</div>
+
+#### Specify Pet Type
+<div class="md-table-max-content md-table-no-bg-color md-table-width-100 md-table-column-4-width-25">
+
+| Placeholder | Argument | Description | Example |
+| - |:-:| - | -- |
+| `%gadgetsmenu_pet_name_<type>%` | `<type>` | Return the name of the pet. | `%gadgetsmenu_pet_name_baby_pig%`, `%gadgetsmenu_pet_name_wolf%`, `%gadgetsmenu_pet_name_angry_bee%` |
+| `%gadgetsmenu_pet_level_<type>%` | `<type>` | Return the current level of the pet. | `%gadgetsmenu_pet_level_wolf%` |
+| `%gadgetsmenu_pet_exp_obtained_<type>%` | `<type>` | Return the experience obtained of the current level of the pet. | `%gadgetsmenu_pet_exp_obtained_wolf%` |
+| `%gadgetsmenu_pet_exp_max_<type>%` | `<type>` | Return the maximum experience of the current level of the pet. | `%gadgetsmenu_pet_exp_max_wolf%` |
+| `%gadgetsmenu_pet_attribute_hunger_<type>%` | `<type>` | Return the hunger level of the pet. | `%gadgetsmenu_pet_attribute_hunger_wolf%` |
+| `%gadgetsmenu_pet_attribute_thirst_<type>%` | `<type>` | Return the thirst level of the pet. | `%gadgetsmenu_pet_attribute_thirst_wolf%` |
+| `%gadgetsmenu_pet_attribute_exercise_<type>%` | `<type>` | Return the exercise level of the pet. | `%gadgetsmenu_pet_attribute_exercise_wolf%` |
 </div>
 
 ### Settings

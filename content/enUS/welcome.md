@@ -60,6 +60,7 @@ To handle Mystery Dust.
  - **[PlayerPoints](https://dev.bukkit.org/projects/playerpoints)**
  - **[CoinsAPI](https://www.spigotmc.org/resources/coinsapi.35150/)**
  - **[TokenManager](https://www.spigotmc.org/resources/tokenmanager.8610/)**
+ - **[CoinsEngine](https://www.spigotmc.org/resources/coinsengine-virtual-currencies-and-economy.84121/)**
 
 Placeholders - Shows information of GadgetsMenu in scoreboard etc.
  - **[PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)**
