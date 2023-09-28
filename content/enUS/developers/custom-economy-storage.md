@@ -77,7 +77,7 @@ public class CustomEconomyMain extends JavaPlugin {
 	
 	@Override
 	public void onEnable() {
-		if(Bukkit.getPluginManager().isPluginEnabled("GadgetsMenu")) {
+		if (Bukkit.getPluginManager().isPluginEnabled("GadgetsMenu")) {
 			// Register and activate the economy storage.
 			try {
 				EconomyProvider economyProvider = new Economy_CustomEconomy(this);
