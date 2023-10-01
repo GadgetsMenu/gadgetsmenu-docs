@@ -58,6 +58,7 @@ These placeholders will returns the pet's information. You can use the `Current 
 | `%gadgetsmenu_current_pet_attribute_hunger%` | Return the current pet's hunger level. |
 | `%gadgetsmenu_current_pet_attribute_thirst%` | Return the current pet's thirst level. |
 | `%gadgetsmenu_current_pet_attribute_exercise%` | Return the current pet's exercise level. |
+| `%gadgetsmenu_current_pet_attribute_happiness%` | Return the current pet's happiness status. |
 </div>
 
 #### Specify Pet Type
@@ -72,6 +73,18 @@ These placeholders will returns the pet's information. You can use the `Current 
 | `%gadgetsmenu_pet_attribute_hunger_<type>%` | `<type>` | Return the hunger level of the pet. | `%gadgetsmenu_pet_attribute_hunger_wolf%` |
 | `%gadgetsmenu_pet_attribute_thirst_<type>%` | `<type>` | Return the thirst level of the pet. | `%gadgetsmenu_pet_attribute_thirst_wolf%` |
 | `%gadgetsmenu_pet_attribute_exercise_<type>%` | `<type>` | Return the exercise level of the pet. | `%gadgetsmenu_pet_attribute_exercise_wolf%` |
+| `%gadgetsmenu_pet_attribute_happiness_<type>%` | `<type>` | Return the happiness status of the pet. | `%gadgetsmenu_pet_attribute_happiness_wolf%` |
+</div>
+
+### Pet Items
+- Reference: [Pet Item List](wiki/features/cosmetic-items/pets#pet-items)
+- `<pet_item>` Syntax: Pet item name in all lowercase and replace whitespace with `_` underscore. (For example: sparring_sword, pumpkin_pie)
+
+<div class="md-table-max-content md-table-no-bg-color md-table-width-100 md-table-column-4-width-25">
+
+| Placeholder | Argument | Description | Example |
+| - |:-:| - | -- |
+| `%gadgetsmenu_pet_items_<pet_item>%` | `<pet_item>` | Return the number of pet items currently owned by the player. | `%gadgetsmenu_pet_items_apple%`, `%gadgetsmenu_pet_items_water%`, `%gadgetsmenu_pet_items_sparring_sword%` |
 </div>
 
 ### Settings
