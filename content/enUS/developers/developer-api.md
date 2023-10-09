@@ -11,7 +11,7 @@ topics:
 Here is the official API that you can use. Please do not use the method that didn't list here, it may cause some unstable issue and may crash the plugin.
 
 ## This is the first thing you need to add
-```
+```java
 public static void doSomeAction(Player player) {
     PlayerManager playerManager = GadgetsMenuAPI.getPlayerManager(player);
     // Add your code here.
