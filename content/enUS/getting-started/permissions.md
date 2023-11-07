@@ -868,6 +868,10 @@ gadgetsmenu.pets.camel.*
 gadgetsmenu.pets.sniffer.*
   gadgetsmenu.pets.sniffer
   gadgetsmenu.pets.babysniffer
+
+gadgetsmenu.pets.vex.*
+  gadgetsmenu.pets.vex
+  gadgetsmenu.pets.angryvex
 ```
 
 ## Miniatures
