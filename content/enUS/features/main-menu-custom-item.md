@@ -43,6 +43,38 @@ Custom-Items:
     - '&7This is the custom item lore.'
 ```
 
+## Attributes
+
+### Name
+
+### Material
+
+### Enabled
+
+### Slot
+```yaml
+Slot: #
+```
+
+#### Multiple Slots
+```yaml
+Slots:
+  - #
+  - #
+  - #
+
+# or
+
+Slots: 
+  - #-#
+  - #-#
+  - #-#
+```
+
+### Commands
+
+### Lore
+
 ## Type of Command
 There are two types of commands that can be used to execute commands from different entities.
  - CONSOLE: The command is executed from the console. No permission is required from the player.
