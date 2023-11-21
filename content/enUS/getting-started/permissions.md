@@ -924,6 +924,11 @@ gadgetsmenu.morphs.irongolem
 gadgetsmenu.morphs.witch
 gadgetsmenu.morphs.snowman
 gadgetsmenu.morphs.guardian
+gadgetsmenu.morphs.cavespider
+gadgetsmenu.morphs.witherskeleton
+gadgetsmenu.morphs.rabbit
+gadgetsmenu.morphs.wolf
+gadgetsmenu.morphs.grinch
 ```
 
 ## Banners
