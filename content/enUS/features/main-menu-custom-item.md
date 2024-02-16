@@ -46,10 +46,22 @@ Custom-Items:
 ## Attributes
 
 ### Name
+```yaml
+# Item display name.
+Name: '&eCustom Item 1'
+```
 
 ### Material
+```yaml
+# Refer material syntax page for more details.
+Material: BOOK
+```
 
 ### Enabled
+```yaml
+# Boolean value: true/false
+Enabled: true
+```
 
 ### Slot
 ```yaml
@@ -72,6 +84,18 @@ Slots:
 ```
 
 ### Commands
+```yaml
+# Command Type: CONSOLE, PLAYER
+# CONSOLE: Command will be executed from console side.
+# PLAYER: Command will be executed from player side. Player need to have the permission in order to execute the command.
+
+# Placeholder: {PLAYER} or any placeholders supported by PlaceholderAPI
+
+# Syntax: <command type>:<command|player action>
+Commands:
+- CONSOLE:say {PLAYER} is clicking Custom Item 1.
+- PLAYER:say I'm clicking Custom Item 1.
+```
 
 ### Lore
 

@@ -156,9 +156,9 @@ gadgetsmenu.animations.holiday
 
 **Child Permissions:**
 ```
-gadgetsmenu.multipleboxes.20
-gadgetsmenu.multipleboxes.50
-gadgetsmenu.multipleboxes.250
+gadgetsmenu.multipleboxes.type1
+gadgetsmenu.multipleboxes.type2
+gadgetsmenu.multipleboxes.type3
 ```
 
 ## Hats
