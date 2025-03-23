@@ -140,3 +140,52 @@ These placeholders will returns the pet's information. You can use the `Current 
 | `%gadgetsmenu_equipped_cosmetics%` | | Get the cosmetics that player equipped. | |
 | `%gadgetsmenu_equipped_<cosmetic>%` | `<cosmetic>` | Get the specific cosmetic that player equipped. | `%gadgetsmenu_equipped_hat%`, `%gadgetsmenu_equipped_animated_hat%`, `%gadgetsmenu_equipped_particle%`, `%gadgetsmenu_equipped_suit_helmet%`, `%gadgetsmenu_equipped_suit_chestplate%`, `%gadgetsmenu_equipped_suit_leggings%`, `%gadgetsmenu_equipped_suit_boots%`, `%gadgetsmenu_equipped_gadget%`, `%gadgetsmenu_equipped_pet%`, `%gadgetsmenu_equipped_miniature%`, `%gadgetsmenu_equipped_morph%`, `%gadgetsmenu_equipped_banner%`, `%gadgetsmenu_equipped_emote%`, `%gadgetsmenu_equipped_cloak%` |
 </div>
+
+### Check Cosmetic Permission Status
+
+<div class="md-table-max-content md-table-no-bg-color md-table-width-100 md-table-column-4-width-25">
+
+| Placeholder | Arguments | Description | Example |
+| - |:-:| - | -- |
+| `%gadgetsmenu_has_permission_<cosmetic>_<permission>%` | `<cosmetic>`, `<permission>` | Get the permission status of a cosmetic item. | `%gadgetsmenu_has_permission_banner_skullking%`, `%gadgetsmenu_has_permission_hat_hamburger%` |
+</div>
+
+#### Sample Output:
+ - Has permission -> `yes`
+ - No permission -> `no`
+
+#### Argument: `<cosmetic>`
+
+**Available Values:** `hat`, `animated_hat`, `particle`, `suit`, `gadget`, `pet`, `miniature`, `morph`, `banner`, `emote`, `cloak`
+
+
+#### Argument: `<permission>`
+
+The `<permission>` value is derived from a predefined list of permissions related to cosmetic effects. These permissions follow the format:
+
+```
+gadgetsmenu.hats.hamburger
+gadgetsmenu.animatedhats.siren
+gadgetsmenu.particles.watersplash
+gadgetsmenu.gadgets.divingboard
+gadgetsmenu.pets.blackrabbit
+gadgetsmenu.miniatures.doge
+gadgetsmenu.morphs.pig
+gadgetsmenu.banners.snowbunny
+gadgetsmenu.emotes.smile
+gadgetsmenu.cloaks.superhero
+```
+[Full Permissions](../wiki/getting-started/permissions)
+
+**To get the correct `<permission>` value for the placeholder:**
+ 1. Start with the full permission string from the list above.
+ 2. Remove the prefix `"gadgetsmenu.<cosmetic>."` from the string.
+ 3. Use the remaining part as the `<permission>` value.
+
+**Example:**
+`gadgetsmenu.hats.hamburger`
+ - Remove `"gadgetsmenu.hats."`
+ - Resulting `<permission>` value: `hamburger`
+ - Final Placeholder will be: `%gadgetsmenu_has_permission_hat_hamburger%`
+
+**More Example:** `%gadgetsmenu_has_permission_animated_hat_siren%`, `%gadgetsmenu_has_permission_particle_watersplash%`, `%gadgetsmenu_has_permission_gadget_divingboard%`, `%gadgetsmenu_has_permission_pet_blackrabbit%`, `%gadgetsmenu_has_permission_miniature_doge%`
