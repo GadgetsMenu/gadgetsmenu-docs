@@ -1,0 +1,517 @@
+---
+title: 更新日志
+description: 您可以在下面的列表中查看 GadgetsMenu 插件的更新日志。
+group: project-info
+keywords: 更新日志
+topics:
+ - 更新日志
+---
+
+## GadgetsMenu 更新日志
+  - 4.3.1
+    - 修复 ISSUES-634 - 没有折扣时物品购买系统失效。
+  - 4.3.0
+    - 新增动画帽子。YEAHHH!!:LOL:
+    - 新增 4 顶动画帽子。
+    - 新增了一些占位符。
+    - 新增 13 顶帽子。
+    - 新增一个选项，用于对隐身玩家隐藏粒子效果和披风效果。
+    - 'CUSTOM_MATERIAL2' 已从插件和主菜单文件中移除。
+    - 修改了 Cowboy 小工具。
+    - 更改了访问 MySQL 数据的方式。（如果您遇到卡顿问题请告知我）
+    - 现在您可以修改化妆品的材料。
+    - 现在您可以在配置中重命名 Scarecrow Jack o Lantern 的显示名称。
+    - 更新了 Metrics。
+    - 由于格式变更，合成神秘箱的说明文字已被重置。
+    - 现在购买化妆品和合成神秘箱可以通过 config.yml 文件中的 'item cost discount' 来打折。
+    - 现在您可以向离线玩家发放神秘箱。
+    - 修复 ISSUES-619 - 每 8 分钟出现一次 SQLException。
+    - 修复 ISSUES-624 - 万圣节动画的小方块朝向错误。
+    - 修复 ISSUES-626 - 超过 2 组玩家同时游玩时 Tic Tac Toc 小工具停止工作。
+    - 修复 ISSUES-627 - 在 1.8 服务器中“Go back”按钮与“Previous Page”按钮重叠，导致两个按钮都无法正常工作。
+    - 修复 ISSUES-629 - 玩家可以使用 Teleport Stick 小工具穿过世界边界。
+    - 修复 ISSUES-630 - 使用 MySQL 时，第一条最近战利品显示为空而不是显示 'none'。
+    - 修复漏洞 - 在某些情况下无法移除花朵（Flower Giver 小工具）。
+    - 修复漏洞 - 'Normal' 和 'Crafting' 神秘宝库动画的音效异常。
+    - 修复漏洞 - 玩家合成神秘箱时服务器时区被更改。
+    - 修复漏洞 - Flower Giver 小工具和 Tic Tac Toe 小工具不再需要对准目标玩家的头部才能发送请求。
+  - 4.2.3
+    - 当玩家没有最近战利品时显示 'none' 而不是显示为空。
+    - 修复 ISSUES-614 - Cowboy 小工具可以骑乘隐身玩家。
+    - 修复 ISSUES-616 - MobGun 小工具的物品与所发射的生物不一致。
+    - 修复 ISSUES-617 - 神秘宝库全息图向所有玩家显示相同的神秘箱数量。
+    - 修复漏洞 - 使用 Paper 服务端时出现 NoSuchFieldError: entityList。
+    - 修复了一些小问题。
+  - 4.2.2
+    - 修复了一些小问题。
+  - 4.2.1
+    - 修复漏洞 - 启用 MySQL 时出现 MySQLSyntaxErrorException。
+  - 4.2.0
+    - 新增 1.13 支持。（测试版）
+    - ISSUES-547 - 新增 Akarin 支持。
+    - ISSUES-588 - 自定义帽子现已支持普通材料方块。
+    - 新增一个选项，用于设置 Teleport Stick 小工具的范围。
+    - “/gmenu namepet”命令现在可以从控制台执行。
+    - 材料格式已变更，无论您使用哪个版本，都需要遵循新的格式。
+    - 现在命令方块可以执行“/gmenu”命令。
+    - 神秘箱的广播消息现在只发送到配置中已启用的世界，而不是所有世界。
+    - 修复 ISSUES-568 - 使用 MySQL 时出现内存泄漏。
+    - 修复 ISSUES-584 - 在玩家附近激活 Trampoline 小工具时，玩家会卡在羊毛方块中。
+    - 修复 ISSUES-586 - MobGun 小工具生成女巫时出现错误。
+    - 修复 ISSUES-587 - 选中时某些小工具物品会在玩家物品栏中显示说明文字。
+    - 修复 ISSUES-589 - 选中时旗帜的说明文字会显示在玩家物品栏中。
+    - 修复 ISSUES-597 - 当“Able-To-Move”设置为 true 时，玩家仍然无法移动菜单选择器。
+    - 修复 ISSUES-602 - 玩家已拥有其中一个小工具时，小工具分类物品仍未解锁。
+    - 修复 ISSUES-603 - 一次开启多个神秘箱时，玩家可以开启任意类型的神秘箱。
+    - 修复 ISSUES-605 - 套装的冷却时间无效。
+    - 修复 ISSUES-610 - MobGun 小工具中的自定义生物名称未显示在动作栏中。
+    - 修复 ISSUES-611 - 重置小工具时出现 IllegalStateException。
+    - 修复了一批小问题。
+  - 4.1.23
+    - 修复 ISSUES-573 - 玩家切换世界时出现错误。
+    - 修复 ISSUES-596 - “/gmb giveall 1 c:(1:40,2:30,3:25,4:15,5:10)”命令无效。
+  - 4.1.22
+    - 新增一个选项，当玩家获得已拥有的战利品时执行自定义命令。
+    - 新增一个选项，用于修改神秘宝库菜单物品的槽位。
+    - 修复 ISSUES-560 - 多名玩家可以同时开启箱子。
+    - 修复漏洞 - 卸下小工具时出现 IllegalStateException。
+  - 4.1.21
+    - 新增一个选项，用于在玩家加入时禁用已选化妆品的同步。
+    - 修复 ISSUES-555 - 创造模式下物品可以被复制。
+    - 修复漏洞 - 插件在启动时无法加载。（仅影响使用土耳其语的服务器。）
+  - 4.1.20
+    - 修复 ISSUES-548 - JSON 消息在 Spigot 1.11 和 1.12 上无效。
+    - 修复漏洞 - 在配置中禁用某些神秘宝库动画时出现错误。
+  - 4.1.19
+    - 修复漏洞 - mysterybox give 命令无效。（自 4.1.17 版本起）
+  - 4.1.18
+    - 不再支持旧的神秘箱格式。
+    - 修改了神秘宝库动画。
+    - 新增 6 种神秘宝库动画。
+    - 新增一个选项，用于随机选择神秘宝库动画。
+    - 新增 JSON 消息，玩家将鼠标悬停在消息上即可获得更多信息。（获得神秘箱和获得战利品的消息）
+    - 新增一个选项，用于在购买后重新打开 GUI 菜单。
+    - 修复 ISSUES-536 - 在同一区域激活相同的小工具（Sand Castle、Diving Board、DJBooth、Pocket Beach）会导致方块无法恢复。
+    - 修复了一些小问题（446、463、545）。
+  - 4.1.17
+    - 可以在“/gmysteryboxes give”和“/gmysteryboxes giveall”命令中设置不同品质之间的几率。
+    - DJBooth 小工具和 DiscoBall 小工具无法在同一区域内激活。
+    - 修复 ISSUES-480、518 - Citizens NPC 变为不可见。
+  - 4.1.16
+    - 修复 ISSUES-528 - 玩家首次加入服务器时出现 SQL 错误。
+    - 修复漏洞 - 玩家卸下 Vampire 套装时出现 IllegalStateException。
+  - 4.1.15
+    - 当玩家没有任何礼包时显示“Error”。
+    - 修复 ISSUES-521 - 部分 SQL 结果集未关闭。
+  - 4.1.14
+    - 修复漏洞 - 合成物品时出现错误。
+  - 4.1.13
+    - 修复 ISSUES-515 - 无法重置已装备的小工具。
+  - 4.1.12
+    - 修复 ISSUES-513 - 启动时出现错误。
+  - 4.1.11
+    - 使用 NBTTag 而不是显示名称来判定化妆品。
+    - 装备化妆品时新增 REPLACE/DROP/WARN 选项。
+    - 472 - 显示“No Box Available”而不是显示“0 Available”（已完成）
+    - 修复漏洞 - 赠送的神秘箱有时不会发放给接收者。
+  - 4.1.10
+    - 新增一个选项，用于同时开启多个神秘箱。
+    - 477 - 新增“/gmenu settings”命令，用于修改个人设置（例如自身伪装视角、绕过冷却时间）
+    - 修复 ISSUES-491 - Let It Snow 小工具可以冻结 Diving Board 的水。
+  - 4.1.9
+    - 新增 Australia 帽子。
+    - 修复漏洞 - 玩家可以获得多朵花。
+    - 修复漏洞 - 神秘宝库动画即使被禁用仍然生效。
+    - 修复漏洞 - 服务器重启/重载时小工具未被移除。
+    - 修复了一些小问题。
+  - 4.1.8
+    - 修复漏洞 - “/gmenu menu main”命令无效。
+    - 修复漏洞 - 使用套装时出现错误。
+    - 修复漏洞 - Thor 之锤有时不会被移除。
+    - 修复漏洞 - 无法更改设置菜单的名称。
+  - 4.1.7
+    - 修复漏洞 - 神秘宝库全息图在启动时未加载。
+    - 修复漏洞 - 钢琴音效在 NBT 音乐中无效。
+  - 4.1.6
+    - 新增“/gmenu purge”命令，用于删除旧的玩家数据。
+    - 新增 1.12 音效。
+    - 修复漏洞 - 神秘宝库在启动时未加载。
+    - 修复漏洞 - 从 4.0.22 版本更新插件时出现错误。
+    - 修复漏洞 - 服务器重启后“mini enderchest”仍然存在。
+  - 4.1.5
+    - 修复漏洞 ISSUES-454 - 可以使用 Cowboy 小工具骑乘旁观模式的玩家。
+  - 4.1.4
+    - 新增 7 个表情。（Sun Tan Emote、Heart Eyes Emote、Dizzy Emote、RIP Emote、Relax Emote、Spicy Emote、Deal With It Emote）
+    - 为套装新增冷却时间。（默认值为 0）
+    - config.yml 现已支持 UTF-8 格式。
+    - 优化了代码。
+  - 4.1.3
+    - 新增 19 只宠物（Snowman、2 只 Polar Bear、8 只 Llama、2 只 Husk、2 只 Zombie Villager、Evoker、Vindicator、Illusioner、Stray Skeleton）。
+    - 新增史莱姆粒子。
+    - 新增一个选项，用于禁用神秘箱合成。
+    - 新增一个选项，用于禁止粒子/披风效果对所有人显示。
+    - 修复漏洞 ISSUES-440 - 服务器安装了 SilkSpawners 插件时启动出现错误。
+    - 修复漏洞 - 1.8 的马无效。
+    - 修复漏洞 - 使用 Rocket 小工具时玩家被踢出。
+  - 4.1.2
+    - 修复漏洞 - 使用 Teleport Stick 小工具时出现错误。
+    - 修复漏洞 - MySQL 问题。
+  - 4.1.1
+    - 新增 Frosty 披风。
+    - 修复漏洞 ISSUES-428 - Scarecrow 小工具出现错误。
+  - 4.1.0
+    - 新增 Coins-JasperJH 支持。
+    - 新增“/gmysteryboxes check [player]”命令，用于查看玩家的神秘箱数量。
+    - 新增“/gmysteryboxes mode redefine <vaultname>”命令，用于重新定义神秘宝库的位置和朝向。
+    - 玩家激活表情时在其上方新增全息图。（测试版）
+    - 新增一个选项，当玩家购买化妆品或从神秘箱中获得战利品时自动装备。（权限）
+    - 新增一种名为 'none' 的更快的神秘宝库动画。
+    - 现在使用每种神秘宝库动画都需要相应的权限。（权限）
+    - 新增 10 个小工具（Diving board Gadget、Teleporter Gadget、Flower Giver Gadget、DJ Booth Gadget、BBQ Grill Gadget、Sand Castle Gadget、Pocket Beach Gadget、Scarecrow Gadget、Ice Cream Stand gadget、Tic Tac Toe Gadget）
+    - 新增 9 个用于获取已装备化妆品的占位符。
+    - 现在每个神秘宝库上方都有四行全息图。
+    - 全新的经济系统。开发者可以使用 API 挂钩自定义经济插件。
+    - 修复漏洞 ISSUES-420 - 服务器之间连接时化妆品未同步。
+    - 修复了一批小问题。
+  - 4.0.22
+    - 化妆品即使在 mystery boxes.yml 中被禁用仍然可以被获得。
+    - 修复漏洞 - 无法通过重命名宠物按钮更改宠物名称。
+    - 修复漏洞 ISSUES-413、415 - 修复 MySQL 问题。
+    - 修复漏洞 ISSUES-416 - 初始化玩家数据时出现 NullPointerException。
+  - 4.0.21
+    - 修复漏洞 - Mystery Dust 无法挂钩到其他插件。（仅出现在 4.0.20 版本中）
+  - 4.0.20
+    - 修复漏洞 ISSUES-407 - 更新插件时出现 NoClassDefFoundError。
+    - 修复漏洞 - 玩家切换世界时化妆品未同步。
+    - 修复漏洞 - 移除神秘宝库时独立全息图未被移除。
+  - 4.0.19
+    - 修复漏洞 ISSUES-405 - 开启神秘箱需要“gadgetsmenu.animations.normal”权限。
+  - 4.0.18
+    - 新增 frown 表情和 cheeky 表情。
+    - 修复了小工具说明文字显示错误的问题。
+    - 修复了 MySQL 连接问题。
+  - 4.0.17
+    - 现在您可以创建自己的表情了。
+    - 修复漏洞 ISSUES-403 - 获取战利品的 displayName 失败。
+    - 修复了物品说明文字显示错误的问题。
+    - 修复了愤怒村民粒子在所有表情中显示，而不是仅在 rage 表情中显示的问题。
+  - 4.0.16
+    - 修复漏洞 - 未安装 ProtocolLib 时独立全息图不会自动禁用。
+  - 4.0.15
+    - 新增“Available Mystery Boxes”独立全息图。（需要安装 ProtocolLib）
+    - 新增 Rage 表情。
+    - 新增 Scanner 披风。
+    - 修复漏洞 ISSUES-375 - 歌曲结束后 DiscoBall 效果仍然激活。
+    - 修复漏洞 ISSUES-380 - 玩家没有重命名宠物的权限时不播放音效。
+    - 修复漏洞 ISSUES-382 - 玩家用光标移动物品时出现错误。
+    - 修复漏洞 ISSUES-391 - 无法使用大写字母或颜色代码重命名宠物。
+    - 修复漏洞 ISSUES-394 - 玩家切换世界时出现错误。
+    - 修复漏洞 ISSUES-255754 - 使用 1.11 Spigot 时出现 NoSuchMethodError。
+    - 修复漏洞 ISSUES-1552 - 无法从神秘箱中获得小工具。
+    - 修复了旗帜菜单无法查看第 3 页及以后页面的问题。
+    - 修复了一批小问题。
+  - 4.0.14
+    - 宠物名称现已支持其他语言。
+    - 玩家没有权限时将移除菜单选择器。
+    - 修复漏洞 - 即使神秘箱被禁用，神秘箱奖励仍未被禁用。
+    - 修复了一批小问题。
+  - 4.0.13
+    - 修复漏洞 - 更新配置时出现问题。
+  - 4.0.12
+    - 重新加入了神秘箱奖励。
+    - 修复漏洞 - 旗帜和 Morphs 无法被禁用。
+    - 修复漏洞 ISSUES-330、ISSUES-362 - 玩家离开服务器时宠物未消失。
+  - 4.0.11
+    - 修改了 Cowboy 小工具。
+    - 新增对所有命令发送者的 mysteryboxes 和 mysterydust 命令支持。 
+    - 修复漏洞 - Cowboy 小工具无效。
+    - 修复漏洞 ISSUES-358 - 玩家无法看到自己的伪装。
+    - 修复漏洞 ISSUES-359 - 已禁用的化妆品仍可从神秘箱中获得。
+  - 4.0.10
+    - 新增一个选项，用于禁用礼物物品栏。
+  - 4.0.9
+    - 重新加入了 reload 命令。
+    - 新增“/mysteryboxes give”对离线玩家的支持。（区分大小写）
+    - 新增 mysteryboxes 命令对命令方块的支持。
+    - 新增一个选项，用于取消开启神秘箱所需的权限。
+    - 新增一个选项，用于在配置中禁用自身伪装视角。
+    - 使用“/gmysteryboxes give <player> <amount> reqperm=false”后，玩家无需权限即可开启神秘箱。
+    - 在从指定槽位或盔甲栏移除物品之前，您无法装备化妆品。
+    - 将 CoinsAPI 更新至 1.4 版本。
+    - 修改了 Cowboy 小工具。
+    - 修复漏洞 - 返回主菜单的自定义命令无效。
+    - 修复漏洞 ISSUES-303 - 修复装备 Morph 后会穿过地面的问题。
+    - 修复漏洞 ISSUES-344 - 修复玩家 Mystery Dust 不为 0 时“mysterydust pay”命令占位符无效的问题。
+    - 修复漏洞 ISSUES-355 - 玩家离开服务器时神秘宝库动画不会停止，且“mini enderchest”不会被移除。
+    - 修复了一批小问题。
+  - 4.0.8
+    - 为 Thor 套装新增铁砧落地时的音效。
+    - 新增一个选项，可再次空手左键点击以关闭 bumblebee 歌曲。
+    - 新增一个选项，用于在主手持有物品时禁用套装能力（Ninja、Baker、Plumber、Spooderman、Bumblebee、Thor、Warrior）。
+    - 修复漏洞 - 即使世界已被禁用，玩家已激活的化妆品仍会同步。
+    - 修复漏洞 ISSUES-171 - 菜单选择器的“mystery dust”和“mystery boxes”未同步。
+    - 修复漏洞 ISSUES-337 - “Previous Page”按钮无效。
+  - 4.0.7
+    - 修复漏洞 ISSUES-312 - 未授予权限时“Red little helper”和“Green little helper”物品显示为未染色的帽子。
+    - 修复漏洞 ISSUES-316 - MySQL 重连错误。
+    - 修复漏洞 ISSUES-321、313 - 神秘宝库全息图每 0.5 秒生成一次。
+  - 4.0.6
+    - 修复漏洞 ISSUES-304 - 忽略冷却时间与 Morph 自身视角设置使用了相同的权限。
+    - 修复漏洞 ISSUES-305 - 激活 discoball 小工具时出现错误。
+    - 修复漏洞 ISSUES-306 - 即使已禁用仍向玩家发放菜单选择器。
+    - 修复漏洞 - 装备 Morph 时出现错误。
+    - 修复了一批小问题。
+  - 4.0.5
+    - 修复漏洞 - 在 1.11/1.12 Spigot 上凋灵骷髅和马生成了错误的类型。
+    - 修复漏洞 ISSUES-295 - 由于检查 WorldGuard 插件，部分小工具无效。
+    - 修复漏洞 ISSUES-296 - 装备 Morph 时出现错误。
+  - 4.0.4
+    - 修复漏洞 - 使用 MySQL 数据库时礼包、已赠送礼物和已收到礼物的计数错误。
+    - 修复漏洞 ISSUES-269 - Morph 自身视角无法禁用。
+    - 修复漏洞 ISSUES-272、274、276 - 重置按钮无效。
+    - 修复漏洞 ISSUES-278 - 禁用自定义物品时，部分物品未显示原始材料。
+    - 修复漏洞 ISSUES-279 - 玩家没有权限时仍可切换“忽略冷却时间”选项。
+    - 修复漏洞 - “/gmenu reset”命令无效。
+  - 4.0.3
+    - 修改了自动更新程序，现在更新完成后不会重启服务器。
+  - 4.0.2
+    - 修复漏洞 ISSUES-272 - 修复因检查 WorldGuard 插件导致 Teleport Stick 小工具、Paint Trail 小工具、Fire Trail 小工具、Let It Snow 小工具、Cowboy 小工具、Paintball Gun 小工具无效的问题。
+  - 4.0.1
+    - 由于 WorldGuard 版本低于 6.2 时存在问题，移除了 WorldGuard 支持。
+    - 修复漏洞 ISSUES-260 - 修复“mysterydust pay”命令占位符无效的问题。
+    - 修复漏洞 ISSUES-262 - 修复“/gmysteryboxes giveall”命令无效的问题。
+    - 修复漏洞 ISSUES-266 - 修复小工具类型 GUI 菜单中重置按钮无效的问题。
+    - 修复了一批小问题。
+  - 4.0.0
+    - 进行了一些优化。
+    - 完整支持 Minecraft 1.12。
+    - 不再支持 3.7.11 及更早的版本。
+    - 更新为最新的插件版本获取方式。
+    - 新增一个选项，用于创建您自己的帽子、粒子效果和旗帜。
+    - 新增菜单选择器权限（gadgetsmenu.menuselector）。现在向玩家发放菜单选择器需要相应权限。
+    - 新增自定义标记，用于在地区内禁用特定化妆品。（需要安装 WorldGuard）
+    - 新增 Morphs 的 iDisguise 支持。插件现在可以配合 iDisguise 或 Lib's Disguise 使用；如果两者都已安装，则优先使用 Lib's Disguise。
+    - 新增一个选项，用于在玩家装备化妆品时禁用某些命令。（"Disabled-Commands"）
+    - 新增一个选项，用于在返回主菜单时执行自定义命令。
+    - 新增赠送神秘箱。
+    - 新增神秘箱对 MySQL 的支持。
+    - 神秘箱现在具有过期时间。
+    - 合成神秘箱、赠送神秘箱和普通神秘箱可以拥有不同的名称。
+    - 新增了一些占位符。
+    - 现在开启普通神秘箱需要相应权限。（权限）
+    - 将 cosmetics 文件夹重命名为 categories 文件夹。
+    - 将 Broadcast Radio 小工具重命名为 Radio 小工具。
+    - 修改了 Radio 小工具，使其只向激活它的玩家播放歌曲。
+    - 将权限 gadgetsmenu.mysterybox 重命名为 gadgetsmenu.mysteryboxes。
+    - Exploding Sheep 小工具现在会显示爆炸倒计时。
+    - 修改了 KawarimiNoJutsu 小工具。
+    - 修改了 Parachute 小工具。
+    - 修改了 Discoball 小工具。
+    - 由于存在不稳定问题，移除了“/gmenu reload”命令。
+    - 修复漏洞（由 AnimalMaceYT #1179 报告）- 当前位置 Y + 150 高于 256 时 Tetherball 小工具无法激活。
+    - 修复了一批问题。
+  - 3.7.11
+    - 修复漏洞（ISSUES-242、ISSUES-243）- 使用 Spigot 1.12.1 时检查更新失败。
+  - 3.7.10
+    - 修复漏洞 ISSUES-218 - 在 1.8.8 Spigot 上为小工具冷却时间使用动作栏时出现 JsonSyntaxException。
+    - 修复漏洞 ISSUES-218 - 使用 mobgun 小工具切换生物时，玩家空手左键点击会出现错误。
+  - 3.7.9
+    - 修复漏洞 ISSUES-190 - 玩家首次加入服务器时出现错误。
+    - 修复漏洞 ISSUES-208 - 冷却条计数错误。
+    - 修复漏洞 ISSUES-209 - 小工具物品可以使用数字键修改。
+  - 3.7.8
+    - 修复漏洞（由 FunnyCraft_ 报告）- Tetherball 小工具在 Minecraft 1.12 上无效。
+    - 修复漏洞 ISSUES-206 - 无法从神秘箱中获得小工具。
+    - 修复漏洞 ISSUES-207 - 套装即使被禁用仍可购买。
+  - 3.7.7
+    - 修复漏洞（由 FunnyCraft_ 报告）- CooldownBar 在 Minecraft 1.12 上无效。
+  - 3.7.6
+    - 新增 1.12 支持。
+  - 3.7.5
+    - 修复漏洞 ISSUES-P1000 - 应已修复宠物重复生成的问题。
+    - 修复漏洞 ISSUES-185 - java.lang.IllegalStateException 问题。
+  - 3.7.4
+    - 修复漏洞 - SQL 语法错误。
+  - 3.7.3
+    - 修复漏洞 ISSUES-135 - 宠物名称包含 " ' " 时的问题。
+    - 修复漏洞 ISSUES-158 - 使用数据库时 Mystery Dust 同步错误。
+  - 3.7.2
+    - GadgetsMenu 信息中的“Date Modified”写错了。
+    - 修复漏洞 ISSUES-153 - 玩家离开游戏时出现 NullPointerException。
+  - 3.7.1
+    - 由于存在无法修复的问题，在 1.8 服务器上移除了 Jukebox 小工具。
+    - 由于存在无法修复的问题，在 1.8 服务器上移除了 Tetherball 小工具。
+    - 修复漏洞 ISSUES-122 - CryoTube 小工具会更改地面上的默认方块。
+    - 修复漏洞 ISSUES-130 - 玩家使用 2 x 2 合成格合成物品时的问题。
+    - 修复漏洞 ISSUES-136 - 禁用某一分类中的所有小工具后 GUI 会损坏。
+    - 修复漏洞 ISSUES-136 - Paintball Gun 小工具的黑名单和半径无效。
+    - 修复漏洞 ISSUES-146 - Mobgun 小工具生成马时出错。
+    - 修复漏洞 ISSUES-147 - 在 1.8 服务器上生成宠物时出现 NoSuchMethodError。
+  - 3.7.0
+    - 新增 9 个小工具。
+    - 新增 8 套套装。
+    - 新增 Mystery Dust 的 CoinsAPI 支持。
+    - 新增一个选项，用于禁用 Morph 能力。
+    - 重命名了神秘箱命令。（/gmysteryboxes）
+    - 现在可以使用 Mystery Dust 合成神秘箱。
+    - Guardian Morph 现在可以发射激光。
+    - 可以通过潜行来关闭 When Pigs Fly 小工具。
+    - 可以更改 Disco Ball 小工具的歌曲时长。
+    - 重写了 Morph Watcher。
+    - 重写了小工具并对其进行了良好的分组。
+    - 修复了启用的化妆品少于 5 个时主菜单物品栏会损坏的问题。
+    - 修复了物品说明文字显示错误的问题。
+    - 修复了 Happy Villager Particles 权限命名错误的问题。
+    - 修复了材料格式。新的材料格式（'1' 或 '1:0'）
+    - 修复了 Affect-Player 设置为 false 时 Bat Launcher 无效的问题。
+    - 修复了玩家可以使用铁砧重命名小工具或选择器物品的问题。
+    - 移除了 MCStats 统计并新增了 bStats 统计。（https://bstats.org/plugin/bukkit/GadgetsMenu）
+    - 您可以添加自己的歌曲音轨。
+    - 更新了小工具文件。旧的小工具文件将被重命名为 'oldgadgets.yml'。
+  - 3.6.17
+    - 修复了未安装 Lib's Disguise 时 Mermaid 套装出错的问题。
+    - 修复了西瓜无法拾取的问题。
+    - 修复了一些小问题。
+  - 3.6.16
+    - 修复了宠物重复生成的问题。
+  - 3.6.15
+    - 新增 Ninja 套装（点击投掷忍者手里剑）
+    - 新增 Mermaid 套装（在水下变身为美丽的鱿鱼）
+    - 新增 Baker 套装（点击在大厅四处派送烘焙食品）
+    - 新增 Sleepy 表情。
+    - 修复了 1.11 骷髅宠物和马宠物无效的问题。
+    - 修复了卡顿问题。
+    - 修复了神秘宝库无法点击“Next Page”的问题。
+  - 3.6.14
+    - 新增一个选项，当玩家点击“go back”箭头时执行命令。
+    - 禁止玩家使用快捷键移动物品。
+    - 问题修复。
+  - 3.6.13
+     - 修复了玩家加入服务器时数据会重复加载的问题。
+    - 修复了 1.8 Cowboy 无效的问题。
+  - 3.6.12
+    - 修复了 Sheep Morph 和 Witch Morph 在 1.8 服务器上无效的问题。
+  - 3.6.11
+    - 新增 1.8 Morphs 支持。
+  - 3.6.10
+    - 问题修复
+  - 3.6.9
+    - 修复了卡顿问题。
+    - 修复了玩家无需任何权限即可重命名宠物的问题。
+  - 3.6.8
+    - 更改了包名。（如果您使用 GadgetsMenu API，必须更新包名。）
+    - 问题修复。
+  - 3.6.7
+    - 新增了一些占位符。
+    - 新增一个选项，默认每隔一小时向玩家发放神秘箱奖励，具体取决于您设置的小时数。
+    - 修复了激活表情时头盔会被替换的问题。
+    - 修复了 MySQL。
+    - 修复了 v1_8_R1 JsonWriter。
+  - 3.6.6
+    - 新增 2 个小工具（Kawarimi No Jutsu Gadget、When Pigs Fly Gadget）
+    - 新增命令 /gmenu equip <cosmetic> <type> <player>
+    - PaintBall Gun 小工具现在会填充 20% 的半径范围。
+    - 修正了拼写错误。
+    - 修复了选择器“Able to move”无效的问题。
+    - 修复了全息图。
+    - 修复了一些小问题。
+    - 修复了 MySQL 错误。
+  - 3.6.5
+    - 新增 Spain 帽子。
+    - 移除了 BannerMeta 的旗帜图案。
+    - 修复了全息图。
+    - 修复了 reload 命令无效的问题。
+  - 3.6.4
+    - 修复了玩家离开服务器时 Speedster 套装的云朵粒子不会被移除的问题。
+    - 修复了获取玩家数据失败的问题。
+    - 修复了 MySQL 错误。
+    - 修复了 Disco Ball 小工具在 1.8 服务器上播放歌曲出错的问题。
+  - 3.6.3
+    - 新增命令“/mysterybox mode info <vaultName>”。
+    - 新增命令“/mysterybox mode list”。
+    - 新增命令“/mysterybox mode near <radius>”。
+    - 新增命令“/mysterybox mode remove-vault r={radius}”。
+    - 新增命令“mysterybox mode teleport <vaultName>”。
+    - 更新了全息图。
+    - 移除了消息“How to setup GadgetsMenu? Click-Here”。
+    - 修复了 PlaceholderAPI 错误。
+    - 修复了 Morph 能力的漏洞。
+  - 3.6.2
+    - 修复了 Parachute 小工具。
+    - 修复了 GUI 漏洞。
+  - 3.6.1
+    - 新增玩家开启神秘箱和获得战利品时的广播选项。
+    - 可以更改神秘箱的名称和材料。
+    - 可以更改神秘宝库 GUI 的名称。
+    - 修复了购买物品错误。
+    - 修复了世界不存在时全息图出错的问题。
+    - 修复了打开神秘宝库出错的问题。
+    - 修复了 /gmenu reload 命令。
+  - 3.6.0
+    - 新增 Vault 和 PlayerPoints 支持。
+    - 新增套装和披风。
+    - 新增一个选项，用于禁用 Bat Launcher 对玩家的影响。
+    - 新增一个选项，可以让骑在您身上的玩家下来。
+    - 新增冷却计时器的 ActionBar 支持。
+    - 新增一个选项，用于更改宠物的移动速度。
+    - 新增一个选项，用于禁用 Morphs 自身视角和绕过冷却时间。
+    - 新增命令方块访问 mystery dust 命令的支持。
+    - 新增化妆品稀有度。
+    - 新增神秘箱、神秘宝库。
+    - 新增设置菜单。
+    - 新增 1.11 音效和 1.11 粒子。
+    - 新增占位符，需要 PlaceholderAPI 插件。
+    - 新增一个选项，让玩家可以在聊天中重命名宠物。
+    - 新增 Morph 技能。
+    - 新增歌曲支持，激活 Disco Ball 小工具时播放歌曲。
+    - 移除了 /menu givemenu 命令。
+    - 移除了 Wardrobe 和 Disco Armor。
+    - 移除了 Clown 帽子。
+    - 将 config.yml 中的 Disabled-Worlds 重命名为 Enabled-Worlds。
+    - 将 Credits 重命名为 Mystery Dust。
+    - 更新 Paintball Gun 小工具，现在只填充 10% 的半径范围。
+    - 更新了 ParticleEffect。
+    - 更新了 GadgetsMenu 的数据存储。
+    - 更新了 Metrics。
+    - 更新了宠物速度，现在可以在宠物文件中更改宠物速度。
+    - 更新了所有命令。
+    - 更新了化妆品的显示名称。
+    - 更新了 /gmenu reload，将会重载插件。
+    - 更新了吉他旗帜图案。
+    - 修复了命令 /menu namepet。
+    - 修复了命令 /menu reset。
+    - 修复了鸡宠物会下蛋的问题。
+    - 修复了 Paintball Gun 方块可被破坏的问题。
+    - 修复了 Fire Trail 小工具。
+    - 修复了切换世界时宠物会错误生成的问题。
+    - 修复了 Mystery Dust 数量可以为负数的问题。
+    - 修复了玩家可以扑灭火焰的问题。（Fire Trail 小工具）
+    - 修复了 Miner 帽子材质与 white wizard 帽子相同的问题。
+    - 修复了使用 1.9 及以上版本 Spigot 时 Cowboy 小工具无效的问题。
+    - 修复了 Explosive Bow 小工具可以拾取箭矢的问题。
+  - 3.5.19
+    - 修复了 MySQL 问题。
+  - 3.5.18
+    - 修复了 1.11 发光物品无效的问题。
+    - 修复了 1.11 刷怪蛋无效的问题。
+  - 3.5.17
+    - 修复了 1.11 音效。
+  - 3.5.16
+    - 新增 1.11 支持。
+  - 3.5.15
+    - 修复了不在同一世界时的监听器问题。
+  - 3.5.14
+    - 修复了西瓜（Melon Launcher 小工具）可以被拾取的问题。
+    - 修复了数据库无法启用的问题。
+  - 3.5.13
+    - 修复了 1.8 宠物。
+    - 修复了玩家无法驯服马以及无法为马穿戴装备的问题。
+  - 3.5.12
+    - 修复了 Cowboy 小工具的循环实体骑乘问题。
+  - 3.5.11
+    - 修复了 Paintball Gun 小工具和 Paint Trail 小工具。
+  - 3.5.10
+    - 修复了方块类小工具不再改变已点亮的红石灯的问题。
+    - 修复了重复向玩家发放物品的问题。
+    - 修复了表情漏洞。
+    - 修复了玩家离开服务器/服务器重载时小工具不会被移除的问题。
