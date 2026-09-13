@@ -74,7 +74,7 @@ Custom-Cloaks:
     Repeat-Delay: 3
 
     # The animation mode of the cloak.
-    # Animation-Mode: GRID, COLOR_GRID, ORBIT, SPIRAL, SCATTER, SPHERE
+    # Animation-Mode: GRID, PICTURE, ORBIT, SPIRAL, SCATTER, SPHERE
     Animation-Mode: GRID
 
     # The colour of the particles. Only works with the REDSTONE particle.
@@ -146,6 +146,53 @@ These properties apply to every cloak, no matter which animation mode it uses.
 | `Repeat-Delay` | Integer | Ticks between animation updates. `1` is every tick, `20` is once per second. Values below `1` are raised to `1`. |
 </div>
 
+## Shape Formats
+
+Two modes read a `Shape`: `GRID` and `PICTURE`. There are two ways to write one.
+
+### Palette, the readable way
+
+Define a `Palette` that maps **one character to one colour**, then draw the shape as art. One character is one cell, and `.` (or a space) is empty.
+
+```yaml
+Palette:
+  k: '#3C0C14'   # outline
+  r: '#D6283C'   # body
+  w: '#FFF0F2'   # highlight
+Shape:
+- '..kkk.....kkk..'
+- '.krrrk...krrrk.'
+- 'krwwrrk.krrrrrk'
+- 'krrrrrrrrrrrrrk'
+- '.krrrrrrrrrrrk.'
+- '..krrrrrrrrrk..'
+- '...krrrrrrrk...'
+- '....krrrrrk....'
+- '.....krrrk.....'
+- '......krk......'
+```
+
+The shape in the config looks like the shape in the world, so you can edit it by eye. **Defining a `Palette` is the only thing that switches a layer to character mode.**
+
+- `.`, a space and `0` always mean empty, in every mode. You cannot use them as palette keys.
+- `#`, `x`, `X` and `1` mean "fill with the layer's `Color`" when they are not in the palette, so a plain single colour shape needs no palette entry.
+- Any other character that is not in the palette is left empty and named in a console warning, so a typo tells you about itself instead of vanishing silently.
+- In `GRID`, which is a single colour, any character that is not empty counts as filled.
+- Quote palette keys that mean something in YAML. `'#'` needs quotes, letters and digits do not.
+- Rows do not have to be the same length. Short rows are padded and a warning tells you which shape it happened in, but keeping them even is what makes the art readable.
+
+>[Tip] {{title: Why this matters}} The built-in Clover cloak is a 21 by 25 grid. Written as comma separated hex that is about 4,200 characters of YAML across 25 lines. As character art it is 525 characters, and you can see the clover in it.
+
+### Comma separated, the original way
+
+Without a `Palette`, `GRID` keeps reading the original format, where every cell is separated by a comma. `PICTURE` always reads character art, so it always needs a `Palette`.
+
+```yaml
+Shape:
+- '0,#FF3366,#FF3366,0'
+- '#FF3366,#FF6699,#FF3366,#FF3366'
+```
+
 ## Animation Modes
 
 The animation mode is set with `Animation-Mode`. There are **6 modes**.
@@ -179,34 +226,58 @@ Shape:
 
 `x` and `true` are accepted in place of `1`, and `false` in place of `0`.
 
-### 2. COLOR_GRID
+### 2. PICTURE
 
-The same grid, but every cell carries its own colour. This is how the built-in Easter Egg, Rose, Clover and Dragon Wings cloaks are drawn.
+**This is the mode to use for a picture.** It draws pixel art flat on the player's back, and it is the renderer behind the built-in Melon, Clover, Strawberry, Snow Globe, Popcorn and Bubble Tea cloaks, so a custom cloak using it hangs and turns exactly the way those do.
+
+This mode replaced the old `COLOR_GRID`, which did the same job with clumsier controls. If you still have a config using it, see [Moving from COLOR_GRID](#moving-from-color_grid).
+
 <div class="md-table-max-content md-table-no-bg-color">
 
 | Property | Type | Default | Description |
 | -------- |:----:|:-------:| ----------- |
-| `Spacing` | Double | `0.2` | The distance between particles, in blocks. |
-| `Y-Start` | Double | `1.3` | The Y offset of the top row from the player's feet. |
-| `Angle-Distance` | Integer | `20` | How much the lower rows curve behind the player. |
-| `Particle-Count` | Integer | `3` | Particles per grid cell. |
-| `Shape` | String List | — | The grid rows. Each cell is a hex colour, or `0` for transparent. |
+| `Palette` | Section | — | One character per colour. See [Shape Formats](#shape-formats). |
+| `Shape` | String List | — | The grid rows, top row first, one character per cell. |
+| `Space` | Double | `0.13` | The distance between neighbouring cells, in blocks. This is what sets the size. |
+| `Tilt` | Double | `20.0` | How many degrees the picture leans back, so it faces up at the sky. |
+| `Bottom-Height` | Double | `0.15` | How high off the feet the **bottom** row hangs. |
+| `Top-Back` | Double | `0.25` | How far behind the shoulders the top row hangs. |
+| `Rotation` | Double | `0.0` | Degrees to turn the picture in its own plane. Positive is clockwise as a viewer sees it. The built-in Clover uses `30`, the Bubble Tea `-30`. |
+| `Particle-Count` | Integer | `1` | Particles per cell. Leave this at `1`. |
 </div>
 
 ```yaml
-Animation-Mode: COLOR_GRID
+Animation-Mode: PICTURE
+Palette:
+  g: '#50C341'   # rind
+  y: '#F0EB78'
+  p: '#F5A5BE'
+  e: '#E12D37'   # flesh
+Space: 0.13
+Tilt: 20.0
+Bottom-Height: 0.15
+Top-Back: 0.25
 Shape:
-- '0,#FF3366,#FF3366,0,0,0,#FF3366,#FF3366,0'
-- '#FF3366,#FF6699,#FF3366,#FF3366,0,#FF3366,#FF6699,#FF3366,#FF3366'
-- '#FF3366,#FF3366,#FF3366,#FF3366,#FF3366,#FF3366,#FF3366,#FF3366,#FF3366'
-- '0,0,0,0,#CC0044,0,0,0,0'
+- '....ggggggggg....'
+- '..ggyyyyyyyyygg..'
+- '.gyyppppppppppyg.'
+- 'gyppeeeeeeeeeppyg'
+- 'gyppeeeeeeeeeppyg'
+- '.gyppeeeeeeeppyg.'
+- '..ggyppeeeppygg..'
+- '....gggyyyggg....'
+- '......ggggg......'
 ```
 
-- `0`, `false` or an empty cell draws nothing.
-- `#RRGGBB` sets that cell's colour. The leading `#` is optional, and `#RGB` shorthand works too.
-- `1`, `x` or `true` fills the cell with the layer's `Color`, so a `GRID` shape can be pasted into a `COLOR_GRID` layer without rewriting it.
+**Sizing it.** The picture ends up `(columns - 1) × Space` blocks wide. At the default `Space: 0.13`, a 21 column shape is about 2.6 blocks across, which is roughly shoulder to shoulder plus a margin.
 
->[Warning] {{title: Warning}} `COLOR_GRID` paints every cell individually, so `Color-Cycle` has no effect in this mode. Use `GRID` if you want the whole shape to cycle colours.
+- `Space` of **0.12 to 0.14** reads as a solid surface at full size.
+- `Space` of **0.09 to 0.10** suits a small emblem. If you go finer than that, keep the cell count up. Shrinking the grid to match is what turns a picture to mush.
+- Wider than `0.14` and it goes dotty.
+
+**Orientation.** The shape is written the way somebody standing behind the player sees it, so what you type is what an onlooker reads. Left in your config is left on screen.
+
+>[Warning] {{title: Warning}} `PICTURE` paints every cell individually, so `Color-Cycle` has no effect in this mode. Use `GRID` if you want a whole shape to cycle colours.
 
 ### 3. ORBIT
 
@@ -300,7 +371,7 @@ Sphere-Speed: 0.11
 
 ## Color Cycling
 
-Colour cycling animates the cloak through a list of colours over time. It works in `GRID`, `ORBIT`, `SPIRAL`, `SCATTER` and `SPHERE`, and only with the `REDSTONE` particle. It has no effect in `COLOR_GRID`, which colours every cell individually.
+Colour cycling animates the cloak through a list of colours over time. It works in `GRID`, `ORBIT`, `SPIRAL`, `SCATTER` and `SPHERE`, and only with the `REDSTONE` particle. It has no effect in `PICTURE`, which colours every cell individually.
 <div class="md-table-max-content md-table-no-bg-color">
 
 | Property | Type | Default | Description |
@@ -359,21 +430,27 @@ Custom-Cloaks:
     Layers:
       # Layer 1: gilded wings across the back.
       Wings:
-        Animation-Mode: COLOR_GRID
-        Spacing: 0.2
-        Y-Start: 2.1
-        Angle-Distance: 22
+        Animation-Mode: PICTURE
+        Palette:
+          e: '#D9A62E'
+          r: '#F5C34B'
+          a: '#FFE08A'
+          g: '#FFF3C4'
+          w: '#FFFFFF'
+        Space: 0.2
+        Tilt: 20.0
+        Bottom-Height: 0.35
         Particle-Count: 2
         Shape:
-        - '#D9A62E,0,0,0,0,0,0,0,0,0,0,0,0,0,#D9A62E'
-        - '#D9A62E,#F5C34B,0,0,0,0,0,0,0,0,0,0,0,#F5C34B,#D9A62E'
-        - '#D9A62E,#F5C34B,#FFE08A,0,0,0,#FFFFFF,0,#FFFFFF,0,0,0,#FFE08A,#F5C34B,#D9A62E'
-        - '#D9A62E,#F5C34B,#FFE08A,#FFF3C4,0,#FFFFFF,#FFFFFF,0,#FFFFFF,#FFFFFF,0,#FFF3C4,#FFE08A,#F5C34B,#D9A62E'
-        - '#D9A62E,#F5C34B,#FFE08A,#FFF3C4,#FFFFFF,#FFFFFF,#FFFFFF,0,#FFFFFF,#FFFFFF,#FFFFFF,#FFF3C4,#FFE08A,#F5C34B,#D9A62E'
-        - '0,#D9A62E,#F5C34B,#FFE08A,#FFF3C4,#FFFFFF,#FFFFFF,0,#FFFFFF,#FFFFFF,#FFF3C4,#FFE08A,#F5C34B,#D9A62E,0'
-        - '0,0,#D9A62E,#F5C34B,#FFE08A,#FFF3C4,#FFFFFF,0,#FFFFFF,#FFF3C4,#FFE08A,#F5C34B,#D9A62E,0,0'
-        - '0,#D9A62E,0,#D9A62E,0,#F5C34B,#FFE08A,0,#FFE08A,#F5C34B,0,#D9A62E,0,#D9A62E,0'
-        - '0,0,0,0,0,0,#F5C34B,0,#F5C34B,0,0,0,0,0,0'
+        - 'e.............e'
+        - 'er...........re'
+        - 'era...w.w...are'
+        - 'erag.ww.ww.gare'
+        - 'eragwww.wwwgare'
+        - '.eragww.wwgare.'
+        - '..eragw.wgare..'
+        - '.e.e.ra.ar.e.e.'
+        - '......r.r......'
 
       # Layer 2: a halo turning above the head.
       # A tight radius with a high Y-Base puts the ring over the player.
@@ -405,7 +482,8 @@ The first time GadgetsMenu generates `custom-cloaks.yml`, it writes **one showca
 | Cloak | Mode | Effect | Also shows |
 | ----- |:----:| ------ | ---------- |
 | `Infernal-Wings` | `GRID` | A tattered demon wing silhouette that breathes through ember colours. | `Color-Cycle` on a `1`/`0` shape |
-| `Phoenix-Wings` | `COLOR_GRID` | The same wingspan with a white hot core fading to dark ember at the tips. | Per cell hex gradients |
+| `Phoenix-Wings` | `PICTURE` | The same wingspan with a white hot core fading to dark ember at the tips. | A six colour `Palette` gradient |
+| `Pixel-Heart` | `PICTURE` | A 15 by 13 pixel heart with an outline and a highlight, 122 particles. | A `Palette` with a character art `Shape` |
 | `Astral-Helix` | `ORBIT` | Six arms circling while sweeping from ankle to head, tracing a rising helix. | `Orbit-Y-Oscillation` with `Color-Cycle` |
 | `Aurora-Scanner` | `SPIRAL` | A wide ring sweeping the body, leaving a twelve colour spectrum trail. | A long `Colors` palette |
 | `Nebula-Storm` | `SCATTER` | Ender portal motes churning in the air around you. | A particle that ignores `Color` |
@@ -433,7 +511,7 @@ The bundled wing cloaks use a 15 wide by 9 tall grid at `Spacing: 0.2`, which is
 ......#.#......
 ```
 
-**Run a gradient outward in COLOR_GRID.** The Phoenix Wings shape steps `#FFF7D6` to `#FFE07A` to `#FFB020` to `#FF6A0D` to `#E02D00` to `#8E1600` from the body out to the wing tip, so the heat visibly falls off. The same shape in one flat colour looks noticeably cheaper.
+**Run a gradient outward.** The Phoenix Wings shape steps `#FFF7D6` to `#FFE07A` to `#FFB020` to `#FF6A0D` to `#E02D00` to `#8E1600` from the body out to the wing tip, so the heat visibly falls off. The same shape in one flat colour looks noticeably cheaper.
 
 ```
 -.............-
@@ -460,8 +538,15 @@ A misconfigured cloak never crashes the server and never disables the whole cloa
 | Unknown `Particle` on the cloak | Falls back to `REDSTONE`. |
 | Unknown `Particle` on a layer | Falls back to the cloak's `Particle`. |
 | Unknown `Rarity` | Falls back to `Legendary`. |
-| Invalid hex in `Color`, `Colors` or a `COLOR_GRID` cell | Falls back to the layer colour, `#FF0000` by default. |
-| `GRID` or `COLOR_GRID` with no `Shape` | A warning is printed and that layer draws nothing. |
+| Invalid hex in `Color`, `Colors` or a `Palette` entry | Falls back to the layer colour, `#FF0000` by default. |
+| `GRID` or `PICTURE` with no `Shape` | A warning is printed and that layer draws nothing. |
+| `Animation-Mode: COLOR_GRID`, which was removed | A warning names the keys to change, and that layer is skipped. |
+| A `Shape` character that is not in the `Palette` | A warning names every unknown character, and those cells are left empty. |
+| A `Palette` key longer than one character | A warning is printed and the entry is ignored, because it could never match a cell. |
+| A `Palette` key of `.`, a space or `0` | A warning is printed and the entry is ignored, because those always mean empty. |
+| Invalid hex in a `Palette` entry | A warning is printed and that entry is dropped. |
+| `Shape` rows of different lengths | A warning is printed and short rows are padded, so the picture stays lined up. |
+| A shape drawing more than 320 particles per update | A warning names the count so you know it is expensive. The cloak still works. |
 | `Repeat-Delay`, `Orbit-Arms`, `Sphere-Points`, `Spiral-Ring-Points`, `Spiral-Particle-Count`, `Particle-Count`, `Angle-Distance` or `Color-Cycle-Speed` below `1` | Raised to `1`. |
 | Negative `Scatter-Count` or `Scatter-Radius-X` / `Y` / `Z` | Made positive. |
 </div>
@@ -470,6 +555,9 @@ Particle names are matched without case, and dashes and spaces count as undersco
 
 ## Tips
 
+- **Use `PICTURE` with a `Palette` for anything with a recognisable shape.** It is the only mode where you can see the picture in the config, and it is what every built-in picture cloak uses.
+- **Budget roughly 320 particles per update for a picture.** The built-in ones run from 155 (Easter Egg) to 321 (Clover), and the plugin warns you in console when a shape goes over. An outline is expensive: on the Clover the dark border alone is about a third of all the particles, and it does not get cheaper when you shrink the picture.
+- **Never use pure black (`#000000`) with `REDSTONE`.** A dust colour with a red channel of zero is treated as "default" by the game. Use a near black such as `#12140C` instead.
 - **`Repeat-Delay` is your main performance control.** The cost of a cloak is roughly `filled cells x Particle-Count` per layer, per `Repeat-Delay` ticks, for every player wearing it. Grid cloaks look identical at a delay of `3` to `5` because the shape does not move, so raise the delay before you shrink the artwork. Orbit, spiral and scatter cloaks need `1` or `2` to look smooth.
 - **`Particle-Count` controls density.** Use `1` for light effects such as `FLAME`, and `2` or `3` for solid `REDSTONE` shapes.
 - **`Angle-Distance` controls the curve.** Lower values wrap the grid further behind the player, higher values flatten it.
